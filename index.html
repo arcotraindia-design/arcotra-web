@@ -213,6 +213,13 @@ footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
 .space .ic{width:26px;height:26px;margin:0 0 12px}
 
 /* ---------- plan çizimi ---------- */
+.options{margin:52px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.options figure{margin:0}
+.options img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);display:block}
+.options figcaption{margin:10px 0 0;font-size:13px;color:var(--muted);letter-spacing:.02em}
+.optnote{grid-column:1/-1;margin:6px 0 0;font-size:15px;color:var(--ink-2);max-width:60ch}
+@media (max-width:720px){.options{grid-template-columns:1fr;gap:18px}}
+
 .planwrap{
   margin:52px 0 0;background:var(--surface);border:1px solid var(--line);
   border-radius:var(--r);padding:36px 40px;display:grid;
@@ -332,6 +339,19 @@ footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
       <div class="step"><p class="n">01</p><h3>Tell us about the space</h3><p>Send photos, a floor plan, or even a rough sketch with measurements. A WhatsApp voice note works too.</p></div><div class="step"><p class="n">02</p><h3>We design it in 3D</h3><p>We plan the layout, choose materials and lighting, and build the room in three dimensions.</p></div><div class="step"><p class="n">03</p><h3>You see it before it exists</h3><p>Walk through realistic views of your own room. Change the worktop, move the island, try another colour — while it still costs nothing.</p></div><div class="step"><p class="n">04</p><h3>You get the drawings</h3><p>Final visuals and dimensioned drawings your builder or carpenter can work from, wherever you are.</p></div>
     </div>
 
+    <div class="options rv">
+      <figure>
+        <img src="img/kitchen-option-wood.jpg" alt="Kitchen design with a wooden worktop" loading="lazy" width="760" height="570">
+        <figcaption>Option A &mdash; timber worktop</figcaption>
+      </figure>
+      <figure>
+        <img src="img/kitchen-option-stone.jpg" alt="Kitchen design with a stone worktop" loading="lazy" width="760" height="570">
+        <figcaption>Option B &mdash; stone worktop</figcaption>
+      </figure>
+      <p class="optnote">The same kitchen, two materials. Deciding here costs nothing; deciding
+      after the cabinets are made costs a great deal.</p>
+    </div>
+
     <div class="planwrap rv">
       <div><svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Floor plan drawing">
   <g stroke="#184860" stroke-linecap="square">
@@ -408,11 +428,12 @@ footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
         <p>A complete home designed room by room, from the entrance through to the kitchen and living spaces.</p>
       </div>
     </article><article class="work rv">
-      <div class="shot"><img src="img/photo-12.jpg" alt="Village home" loading="lazy" width="680" height="510"></div>
+      <div class="shot"><img src="img/work-village-kitchen.jpg" alt="Village home — kitchen design" loading="lazy" width="900" height="674"></div>
       <div class="body">
         <h3>Village home</h3>
-        <p class="meta">Full home design</p>
-        <p>A village house reworked for family life, keeping the character of the building intact.</p>
+        <p class="meta">Private residence &middot; full home design</p>
+        <p>A single-storey village house designed from the plan up. The kitchen was worked out in
+        3D first, down to the worktop and the run of the cabinets, before anything was ordered.</p>
       </div>
     </article><article class="work rv">
       <div class="shot"><img src="img/photo-13.jpg" alt="Living spaces" loading="lazy" width="680" height="510"></div>
