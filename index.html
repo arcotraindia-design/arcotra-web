@@ -33,7 +33,7 @@
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:var(--paper);color:var(--ink);
+  margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);
   font:400 17px/1.65 "Inter","Helvetica Neue",Arial,sans-serif;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
@@ -260,7 +260,7 @@ footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
 
 
 /* ---------- portal girisi ---------- */
-.portal{min-height:calc(100vh - 68px);display:grid;grid-template-columns:repeat(3,1fr)}
+.portal{height:calc(100vh - 68px);min-height:420px;display:grid;grid-template-columns:repeat(3,1fr)}
 .pane{
   position:relative;display:flex;flex-direction:column;justify-content:flex-end;
   padding:44px 34px 46px;text-decoration:none;color:#fff;overflow:hidden;
@@ -376,39 +376,8 @@ nav .navlinks a.on{color:var(--navy);font-weight:600}
       <p>Marble, natural stone and ceramic &mdash; sourced from India and shipped to your project.</p>
       <span class="go">Explore &rarr;</span>
     </a>
-  </main><p class="portal-note"><strong>ARCOTRA PRIVATE LIMITED</strong> &mdash; Noida, India. Choose a division above, or <a href="https://wa.me/919289480963" target="_blank" rel="noopener">message us on WhatsApp</a>.</p>
-<footer>
-  <div class="wrap">
-    <div class="top">
-      <div>
-        <img src="/img/logo-02.png" width="130" height="31" alt="Arcotra">
-        <p style="margin:0;max-width:32ch">Architecture, construction consultancy and trade.</p>
-      </div>
-      <div class="cols">
-        <div>
-          <h4>Divisions</h4>
-          <ul>
-            <li><a href="/architecture/">Architecture</a></li>
-            <li><a href="/construction/">Construction</a></li>
-            <li><a href="/trade/">Trade</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@arcotratrade.com">info@arcotratrade.com</a></li>
-            <li><a href="https://wa.me/919289480963" target="_blank" rel="noopener">+91 92894 80963</a></li>
-            <li>Sector 63, Noida<br>Uttar Pradesh, India</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="legal">
-      <span>&copy; 2026 Arcotra Private Limited</span>
-      <span>CIN U74109UP2025PTC227082 &nbsp;&middot;&nbsp; GSTIN 09ABDCA2146E1Z0</span>
-    </div>
-  </div>
-</footer>
+  </main>
+
 <script>
 (function(){
   "use strict";
