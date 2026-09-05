@@ -259,22 +259,6 @@ footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
 
 
 
-/* ---------- ana sayfa hero ---------- */
-.homehero{position:relative;min-height:min(76vh,660px);display:flex;align-items:flex-end;overflow:hidden}
-.homehero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.homehero::after{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg,rgba(10,24,32,.78) 8%,rgba(10,24,32,.4) 52%,rgba(10,24,32,.16))}
-.homehero .wrap{position:relative;z-index:2;padding-top:64px;padding-bottom:60px}
-.homehero .eyebrow{color:#E8C8A8}
-.homehero h1{color:#fff;font-size:clamp(34px,6vw,64px);letter-spacing:-.025em;max-width:14ch}
-.homehero p{color:rgba(255,255,255,.88);max-width:50ch;margin:20px 0 0;font-size:17.5px}
-.portal{min-height:0}
-.pane{min-height:340px}
-@media (max-width:720px){
-  .homehero{min-height:0}
-  .homehero .wrap{padding-top:48px;padding-bottom:42px}
-}
-
 /* ---------- portal girisi ---------- */
 .portal{min-height:calc(100vh - 68px);display:grid;grid-template-columns:repeat(3,1fr)}
 .pane{
@@ -370,17 +354,7 @@ nav .navlinks a.on{color:var(--navy);font-weight:600}
       <span></span><span></span><span></span>
     </button>
   </div>
-</nav><header class="homehero">
-  <img src="/img/hero-home.jpg" alt="A house designed by Arcotra at sunset, with drawings and stone samples in the foreground" width="1600" height="1333" fetchpriority="high">
-  <div class="wrap">
-    <p class="eyebrow">Arcotra Private Limited &middot; Noida, India</p>
-    <h1>Spaces, people, lives.</h1>
-    <p>We design buildings and interiors, advise through the build, and supply the stone
-    and tile that finishes them.</p>
-  </div>
-</header>
-
-<main class="portal">
+</nav><main class="portal">
     <a class="pane" href="/architecture/">
       <img src="/img/hero-architecture.jpg" alt="Architecture" loading="eager" width="1100" height="740">
       <p class="num">01</p>
