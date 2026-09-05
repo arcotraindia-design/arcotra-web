@@ -326,6 +326,18 @@ nav .navlinks a.on{color:var(--navy);font-weight:600}
 .trio figcaption{margin:12px 0 0;font-size:14.5px;color:var(--ink-2)}
 .trio h3{font-size:17px;margin:0 0 6px}
 
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:22px}
+.pcard{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.pcard:hover{transform:translateY(-3px);box-shadow:0 14px 30px -20px rgba(24,42,52,.4)}
+.pcard img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line);
+  background:var(--warm)}
+.pcard figcaption{padding:15px 16px 17px}
+.pcard h3{font-size:16px;margin:0 0 3px;letter-spacing:-.005em}
+.pcard .origin{margin:0 0 8px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);font-weight:600}
+.pcard p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.55}
+
 .stat{border-left:2px solid var(--navy);padding:4px 0 4px 22px;margin:30px 0 0}
 .stat p{margin:0 0 10px;color:var(--ink-2)}
 .stat p:last-child{margin:0}
@@ -356,7 +368,7 @@ nav .navlinks a.on{color:var(--navy);font-weight:600}
   </div>
 </nav>
 <header class="dhero">
-  <img src="/img/hero-trade.jpg" alt="Large-format stone tiling in a bathroom" width="1100" height="1650" fetchpriority="high">
+  <img src="/img/hero-trade.jpg" alt="Indian green marble slab" width="1100" height="673" fetchpriority="high">
   <div class="wrap">
     <p class="eyebrow">Trade</p>
     <h1>Marble and ceramic, shipped from India.</h1>
@@ -368,41 +380,184 @@ nav .navlinks a.on{color:var(--navy);font-weight:600}
 <section>
   <div class="wrap">
     <div class="sechead rv">
-      <p class="eyebrow">What we supply</p>
-      <h2>Marble and ceramic, by the container.</h2>
-      <p>We ship natural stone and ceramic tile from India. Tell us the project and the quantity
-      and we will come back with what fits it, what it costs, and what it will take to get there.</p>
+      <p class="eyebrow">Indian marble collection</p>
+      <h2>Ten marbles, quarried in India.</h2>
+      <p>Rajasthan, Madhya Pradesh, Gujarat and Uttar Pradesh. Blocks vary &mdash; we send
+      photographs of the actual lot before anything is cut for you.</p>
     </div>
-
-    <p class="eyebrow rv" style="margin-top:44px">Marble &amp; natural stone</p>
-    <div class="trio rv">
-      <figure>
-        <img src="/img/trade-kitchen.jpg" alt="Stone worktop in a kitchen" width="760" height="507" loading="lazy">
-        <figcaption><h3>White marble</h3>Worktops, vanities and flooring. The workhorse of Indian stone export.</figcaption>
+    <div class="pgrid rv">
+      <figure class="pcard">
+        <img src="/img/products/makrana-white.jpg" alt="Makrana White" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Makrana White</h3>
+          <p class="origin">Rajasthan</p>
+          <p>The stone the Taj Mahal was built from. Dense, bright white, takes a high polish.</p>
+        </figcaption>
       </figure>
-      <figure>
-        <img src="/img/trade-stone-wall.jpg" alt="Stone cladding on a feature wall" width="760" height="507" loading="lazy">
-        <figcaption><h3>Veined &amp; coloured marble</h3>Feature walls, cladding and fireplace surrounds where the stone is the point.</figcaption>
+      <figure class="pcard">
+        <img src="/img/products/banswara-white.jpg" alt="Banswara White" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Banswara White</h3>
+          <p class="origin">Rajasthan</p>
+          <p>Warm off-white with soft grey movement. A quieter alternative to pure white.</p>
+        </figcaption>
       </figure>
-      <figure>
-        <img src="/img/hero-trade.jpg" alt="Large-format stone in a bathroom" width="1100" height="1650" loading="lazy">
-        <figcaption><h3>Dark stone &amp; granite</h3>Bathrooms, stair treads and surfaces that take heavy use.</figcaption>
+      <figure class="pcard">
+        <img src="/img/products/statuario-india.jpg" alt="Statuario India" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Statuario India</h3>
+          <p class="origin">Rajasthan</p>
+          <p>White ground with bold grey veining. Statement worktops and vanities.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/katni-grey.jpg" alt="Katni Grey" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Katni Grey</h3>
+          <p class="origin">Madhya Pradesh</p>
+          <p>Even mid-grey with fine veining. Forgiving underfoot and easy to match.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/fantasy-brown.jpg" alt="Fantasy Brown" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Fantasy Brown</h3>
+          <p class="origin">Rajasthan</p>
+          <p>Banded brown and grey with strong movement. No two slabs alike.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/emperador-brown.jpg" alt="Emperador Brown" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Emperador Brown</h3>
+          <p class="origin">Rajasthan</p>
+          <p>Deep brown with a fine white web. Warm in low light.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/gujarat-green.jpg" alt="Gujarat Green" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Gujarat Green</h3>
+          <p class="origin">Gujarat</p>
+          <p>Dark green with white veining. Cladding, reception desks, feature walls.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/black-marquina.jpg" alt="Black Marquina" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Black Marquina</h3>
+          <p class="origin">Rajasthan</p>
+          <p>Near-black with sharp white veins. High contrast, high polish.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/pink-marble.jpg" alt="Pink Marble" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Pink Marble</h3>
+          <p class="origin">Rajasthan</p>
+          <p>Soft rose with pale veining. Long used in Indian architecture.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/agra-red.jpg" alt="Agra Red" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Agra Red</h3>
+          <p class="origin">Uttar Pradesh</p>
+          <p>Deep red sandstone-toned marble. Traditional in north Indian building.</p>
+        </figcaption>
       </figure>
     </div>
+  </div>
+</section>
 
-    <p class="eyebrow rv" style="margin-top:52px">Ceramic &amp; porcelain tile</p>
-    <div class="trio rv">
-      <figure>
-        <img src="/img/trade-bath-tile.jpg" alt="Ceramic wall tile in a bathroom" width="760" height="507" loading="lazy">
-        <figcaption><h3>Wall tile</h3>Bathrooms and kitchens, in the sizes and finishes that actually move.</figcaption>
+<section class="alt">
+  <div class="wrap">
+    <div class="sechead rv">
+      <p class="eyebrow">Indian ceramic collection</p>
+      <h2>Ten tile ranges, made in India.</h2>
+      <p>Floor and wall tile across the finishes that actually move &mdash; from high-gloss
+      vitrified to large-format porcelain.</p>
+    </div>
+    <div class="pgrid rv">
+      <figure class="pcard">
+        <img src="/img/products/vitrified-tiles.jpg" alt="Vitrified Tiles" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Vitrified Tiles</h3>
+          <p class="origin">High gloss</p>
+          <p>Low porosity, hard wearing. The volume floor product for large areas.</p>
+        </figcaption>
       </figure>
-      <figure>
-        <img src="/img/cons-bathroom.jpg" alt="Large-format floor tile" width="760" height="507" loading="lazy">
-        <figcaption><h3>Vitrified floor tile</h3>The volume product &mdash; hard, low porosity, priced to ship in quantity.</figcaption>
+      <figure class="pcard">
+        <img src="/img/products/glazed-porcelain.jpg" alt="Glazed Porcelain" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Glazed Porcelain</h3>
+          <p class="origin">Natural finish</p>
+          <p>Glazed surface over a porcelain body. Wide range of looks.</p>
+        </figcaption>
       </figure>
-      <figure>
-        <img src="/img/photo-08.jpg" alt="Large-format porcelain panel" width="420" height="262" loading="lazy">
-        <figcaption><h3>Large-format porcelain</h3>Fewer joints, bigger panels, for floors and cladding.</figcaption>
+      <figure class="pcard">
+        <img src="/img/products/full-body-tiles.jpg" alt="Full Body Tiles" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Full Body Tiles</h3>
+          <p class="origin">Through-colour</p>
+          <p>Colour runs through the tile, so chips and edges do not show.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/matt-finish-tiles.jpg" alt="Matt Finish Tiles" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Matt Finish Tiles</h3>
+          <p class="origin">Non-reflective</p>
+          <p>Less glare, better grip. Bathrooms and busy floors.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/large-format-tiles.jpg" alt="Large Format Tiles" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Large Format Tiles</h3>
+          <p class="origin">Fewer joints</p>
+          <p>Big panels for floors and cladding. Fewer grout lines to clean.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/wooden-look-tiles.jpg" alt="Wooden Look Tiles" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Wooden Look Tiles</h3>
+          <p class="origin">Plank format</p>
+          <p>The look of timber with the wear resistance of porcelain.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/concrete-look.jpg" alt="Concrete Look" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Concrete Look</h3>
+          <p class="origin">Contemporary</p>
+          <p>Flat mineral tone. Popular in commercial and modern residential.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/wall-tiles.jpg" alt="Wall Tiles" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Wall Tiles</h3>
+          <p class="origin">Marble effect</p>
+          <p>Lightweight wall formats, including book-matched marble prints.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/3d-tiles.jpg" alt="3D Tiles" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>3D Tiles</h3>
+          <p class="origin">Relief surface</p>
+          <p>Textured relief panels for feature walls and headboard walls.</p>
+        </figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="/img/products/decorative-tiles.jpg" alt="Decorative Tiles" width="286" height="175" loading="lazy">
+        <figcaption>
+          <h3>Decorative Tiles</h3>
+          <p class="origin">Patterned</p>
+          <p>Printed and encaustic-style patterns for floors and splashbacks.</p>
+        </figcaption>
       </figure>
     </div>
 
@@ -410,9 +565,10 @@ nav .navlinks a.on{color:var(--navy);font-weight:600}
       <p><strong>We are on both sides of the material.</strong> We specify stone and tile in our own
       design projects and we supply it &mdash; so what we recommend comes from having drawn the room,
       not from what is sitting in a warehouse.</p>
-      <p>That is also the part clients use most: <strong>we advise on what to specify</strong> &mdash;
-      which material suits the use, which finish survives it, and where the money is better spent
-      elsewhere. If something you are asking for is wrong for the job, we will say so.</p>
+      <p>That is the part clients use most: <strong>we advise on what to specify</strong> &mdash;
+      which material suits the use, which finish survives it, how much waste to allow for, and where
+      the money is better spent elsewhere. If something you are asking for is wrong for the job,
+      we will say so.</p>
     </div>
   </div>
 </section>
