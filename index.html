@@ -251,26 +251,17 @@ footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
   .planwrap{grid-template-columns:1fr;gap:26px;padding:26px 22px}
 }
 
-/* ---------- musteri yorumlari ---------- */
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.quote{
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  padding:30px 28px 26px;display:flex;flex-direction:column;
-}
-.quote .mark{
-  font-family:"Fraunces",Georgia,serif;font-size:52px;line-height:.7;
-  color:var(--line-2);margin:0 0 10px;
-}
-.quote blockquote{margin:0 0 20px;font-size:16.5px;line-height:1.6;color:var(--ink);flex:1}
-.quote figcaption{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding:14px 0 0}
-.quote figcaption strong{display:block;color:var(--ink);font-weight:600;margin:0 0 2px}
-.quote.empty{border-style:dashed;background:transparent}
-.quote.empty blockquote{color:var(--muted);font-style:italic}
-.needfill{
-  margin:26px 0 0;padding:14px 18px;border-left:3px solid var(--accent);
-  background:#FBF3EE;border-radius:0 var(--r) var(--r) 0;font-size:14px;color:var(--ink-2);
-}
-.needfill strong{color:var(--accent)}
+/* ---------- musteri kayitlari ---------- */
+.facts3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.fact{background:var(--surface);padding:32px 28px 30px}
+.fact .big{font-family:"Fraunces",Georgia,serif;font-size:46px;line-height:1;color:var(--navy);
+  margin:0 0 14px;font-weight:600;letter-spacing:-.02em}
+.fact .big span{font-size:19px;color:var(--muted);font-weight:500;letter-spacing:0}
+.fact h3{font-size:16px;margin:0 0 9px;letter-spacing:-.005em}
+.fact p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
+.cnote{margin:26px 0 0;font-size:14px;color:var(--muted);max-width:62ch}
+
 </style>
 </head>
 <body>
@@ -493,32 +484,32 @@ footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
   <div class="wrap">
     <div class="sechead rv">
       <p class="eyebrow">Clients</p>
-      <h2>What the people we worked for say.</h2>
-      <p>We would rather show a few honest sentences from real clients than a page of adjectives
-      written by ourselves.</p>
+      <h2>What our clients did says more than anything we could write about ourselves.</h2>
+      <p>We are a small studio, so we would rather show you the record than a page of adjectives.</p>
     </div>
-    <div class="quotes rv">
-      <figure class="quote empty">
-        <p class="mark">&ldquo;</p>
-        <blockquote>Client comment goes here &mdash; two or three sentences in their own words.</blockquote>
-        <figcaption><strong>Client name or initials</strong>Project type</figcaption>
-      </figure>
-      <figure class="quote empty">
-        <p class="mark">&ldquo;</p>
-        <blockquote>Client comment goes here &mdash; two or three sentences in their own words.</blockquote>
-        <figcaption><strong>Client name or initials</strong>Project type</figcaption>
-      </figure>
-      <figure class="quote empty">
-        <p class="mark">&ldquo;</p>
-        <blockquote>Client comment goes here &mdash; two or three sentences in their own words.</blockquote>
-        <figcaption><strong>Client name or initials</strong>Project type</figcaption>
-      </figure>
+
+    <div class="facts3 rv">
+      <div class="fact">
+        <p class="big">6</p>
+        <h3>projects, for four clients</h3>
+        <p>Homes and commercial interiors, each designed in 3D before anything was built.</p>
+      </div>
+      <div class="fact">
+        <p class="big">2 <span>of 4</span></p>
+        <h3>clients came back</h3>
+        <p>Half of the people we have worked for asked us to design a second project.
+        That is the part we are most pleased about.</p>
+      </div>
+      <div class="fact">
+        <p class="big">&mdash;</p>
+        <h3>nearly all by recommendation</h3>
+        <p>Almost every project has come from someone telling a friend or a colleague.
+        We have never advertised.</p>
+      </div>
     </div>
-    <div class="needfill rv">
-      <strong>To be filled in.</strong> These three cards are empty on purpose. Ask past clients for
-      two or three sentences each, in their own words, and send them over &mdash; they will replace
-      this block. Nothing invented goes here.
-    </div>
+
+    <p class="cnote rv">Written comments from clients will be added here as we collect them.
+    We ask permission first, and we publish a name only if the client is happy for us to.</p>
   </div>
 </section>
 
