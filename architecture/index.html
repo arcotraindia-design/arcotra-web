@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arcotra Architecture — 3D interior design for your home</title>
+<meta name="description" content="Send us photos of the room. We design it in 3D, you see exactly how it will look, and only then does anyone pick up a tool.">
+<link rel="canonical" href="https://arcotratrade.com/architecture/">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta name="theme-color" content="#184860">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arcotra">
+<meta property="og:title" content="Arcotra Architecture — 3D interior design for your home">
+<meta property="og:description" content="Send us photos of the room. We design it in 3D, you see exactly how it will look, and only then does anyone pick up a tool.">
+<meta property="og:url" content="https://arcotratrade.com/architecture/">
+<meta property="og:image" content="https://arcotratrade.com/img/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://arcotratrade.com/img/share-card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --navy:#184860; --navy-d:#0F3245; --ink:#242A2E; --ink-2:#4E585F;
+  --muted:#7C878E; --line:#E2E5E4; --line-2:#CFD5D4;
+  --paper:#FBFAF7; --surface:#FFFFFF; --warm:#F2EEE6; --accent:#B5643A;
+  --r:4px; --max:1120px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font:400 17px/1.65 "Inter","Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.02em;margin:0;line-height:1.12}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 14px;
+}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:60;background:rgba(251,250,247,.88);
+  backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+nav img{height:32px;width:auto}
+.navlinks{display:flex;gap:30px;align-items:center}
+.navlinks a{
+  text-decoration:none;font-size:14.5px;color:var(--ink-2);font-weight:500;
+  transition:color .18s;
+}
+.navlinks a:hover{color:var(--navy)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;
+  text-decoration:none;font-size:14.5px;font-weight:600;padding:11px 20px;
+  border-radius:100px;transition:background .18s,transform .18s;white-space:nowrap;
+}
+.btn:hover{background:var(--navy-d);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--line-2)}
+.btn.ghost:hover{background:#fff;border-color:var(--navy)}
+.menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.menu-btn span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:.2s}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 76px;position:relative;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;inset:auto -10% -40% 40%;height:520px;
+  background:radial-gradient(closest-side,rgba(24,72,96,.07),transparent 70%);
+  pointer-events:none;
+}
+.hero h1{font-size:clamp(38px,7vw,72px);max-width:16ch}
+.rot{color:var(--navy);display:inline-block;position:relative}
+.rot .word{
+  position:absolute;left:0;top:0;          /* hepsi ayni noktada ust uste */
+  opacity:0;transform:translateY(.32em);
+  animation:cyc 12s infinite;white-space:nowrap;
+}
+.rot .sizer{visibility:hidden;pointer-events:none}   /* genisligi ve taban cizgisini belirler */
+@keyframes cyc{
+  0%,2%{opacity:0;transform:translateY(.32em)}
+  6%,22%{opacity:1;transform:translateY(0)}
+  27%,100%{opacity:0;transform:translateY(-.28em)}
+}
+@media (prefers-reduced-motion:reduce){
+  .rot .word{animation:none;opacity:0}
+  .rot .word:nth-child(2){opacity:1;transform:none}   /* 1. cocuk .sizer */
+}
+.hero p.lede{
+  font-size:clamp(17px,2.1vw,20px);color:var(--ink-2);max-width:52ch;margin:26px 0 34px;
+}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero .note{font-size:14px;color:var(--muted);margin:22px 0 0}
+
+/* ---------- şeritler ---------- */
+section{padding:82px 0}
+section.alt{background:var(--warm)}
+.sechead{max-width:60ch;margin:0 0 46px}
+.sechead h2{font-size:clamp(27px,4vw,40px)}
+.sechead p{color:var(--ink-2);margin:16px 0 0;font-size:17px}
+
+/* ---------- mekânlar ---------- */
+.spaces{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.space{background:var(--surface);padding:30px 26px;transition:background .2s}
+.space:hover{background:#fff}
+.space .ic{width:30px;height:30px;color:var(--navy);margin:0 0 16px}
+.space h3{font-size:19px;margin:0 0 8px}
+.space p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
+
+/* ---------- adımlar ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px}
+.step .n{
+  font-family:"Fraunces",Georgia,serif;font-size:40px;color:var(--line-2);
+  line-height:1;margin:0 0 12px;font-weight:600;
+}
+.step h3{font-size:18px;margin:0 0 8px}
+.step p{margin:0;font-size:15.5px;color:var(--ink-2)}
+
+/* ---------- işler ---------- */
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.work{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;transition:transform .22s,box-shadow .22s;
+}
+.work:hover{transform:translateY(-3px);box-shadow:0 14px 34px -20px rgba(24,42,52,.35)}
+.shot{
+  aspect-ratio:4/3;background:var(--warm);display:flex;align-items:center;justify-content:center;
+  border-bottom:1px solid var(--line);position:relative;
+}
+.shot img{width:100%;height:100%;object-fit:cover}
+.ph{text-align:center;color:var(--muted);padding:20px}
+.ph svg{width:34px;height:34px;opacity:.5;margin:0 auto 10px}
+.ph span{font-size:12.5px;letter-spacing:.04em;display:block;line-height:1.5}
+.work .body{padding:22px 24px 26px}
+.work h3{font-size:19px;margin:0 0 5px}
+.work .meta{font-size:13.5px;color:var(--muted);margin:0 0 12px}
+.work p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
+
+/* ---------- hakkında ---------- */
+.about{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:start}
+.about p{color:var(--ink-2);margin:0 0 18px}
+.about p strong{color:var(--ink)}
+.facts{border-left:2px solid var(--navy);padding:2px 0 2px 24px}
+.facts dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:14.5px}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;font-weight:500}
+
+/* ---------- iletişim ---------- */
+.contact{background:var(--navy);color:#fff;border-radius:var(--r);padding:60px 48px;text-align:center}
+.contact h2{font-size:clamp(28px,4.4vw,42px);color:#fff;max-width:18ch;margin:0 auto}
+.contact p{color:rgba(255,255,255,.78);max-width:46ch;margin:20px auto 30px;font-size:17px}
+.contact .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contact .btn{background:#fff;color:var(--navy)}
+.contact .btn:hover{background:var(--warm)}
+.contact .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.contact .btn.ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+/* ---------- alt ---------- */
+footer{border-top:1px solid var(--line);padding:46px 0 40px;font-size:14px;color:var(--muted)}
+footer .top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;margin:0 0 30px}
+footer img{height:28px;width:auto;margin:0 0 14px}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--navy)}
+footer .cols{display:flex;gap:56px;flex-wrap:wrap}
+footer h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin:0 0 12px;font-weight:600}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px}
+
+/* ---------- görünürlük animasyonu ---------- */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ---------- mobil ---------- */
+@media (max-width:860px){
+  .about{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  section{padding:60px 0}
+  .hero{padding:56px 0 52px}
+  .menu-btn{display:block}
+  .navlinks{
+    position:fixed;inset:68px 0 auto;background:var(--paper);flex-direction:column;
+    align-items:stretch;gap:0;padding:10px 24px 26px;border-bottom:1px solid var(--line);
+    transform:translateY(-120%);transition:transform .28s ease;
+  }
+  .navlinks.open{transform:none}
+  .navlinks a{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+  .navlinks .btn{margin:16px 0 0;justify-content:center;border-bottom:0}
+  .contact{padding:44px 24px}
+  footer .cols{gap:32px}
+}
+
+/* ---------- hero görseli ---------- */
+.herogrid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.heroshot{
+  position:relative;border-radius:var(--r);overflow:hidden;
+  box-shadow:0 26px 60px -34px rgba(16,34,44,.55);
+}
+.heroshot img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.2}
+.heroshot figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:34px 20px 14px;
+  background:linear-gradient(transparent,rgba(10,24,32,.72));
+  color:rgba(255,255,255,.9);font-size:12.5px;letter-spacing:.03em;
+}
+
+/* ---------- mekân kartı görseli ---------- */
+.space{padding:0;display:flex;flex-direction:column}
+.space .pic{aspect-ratio:16/10;overflow:hidden;background:var(--warm)}
+.space .pic img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.space:hover .pic img{transform:scale(1.04)}
+.space .txt{padding:22px 24px 26px}
+.space .ic{width:26px;height:26px;margin:0 0 12px}
+
+/* ---------- plan çizimi ---------- */
+.options{margin:52px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.options figure{margin:0}
+.options img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);display:block}
+.options figcaption{margin:10px 0 0;font-size:13px;color:var(--muted);letter-spacing:.02em}
+.optnote{grid-column:1/-1;margin:6px 0 0;font-size:15px;color:var(--ink-2);max-width:60ch}
+@media (max-width:720px){.options{grid-template-columns:1fr;gap:18px}}
+
+.planwrap{
+  margin:52px 0 0;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);padding:36px 40px;display:grid;
+  grid-template-columns:1fr 1.15fr;gap:44px;align-items:center;
+}
+.planwrap svg{width:100%;height:auto}
+.planwrap h3{font-size:21px;margin:0 0 12px}
+.planwrap p{margin:0 0 14px;color:var(--ink-2);font-size:15.5px}
+.planwrap .cap{font-size:12.5px;color:var(--muted);margin:0}
+
+@media (max-width:900px){
+  .herogrid{grid-template-columns:1fr;gap:34px}
+  .planwrap{grid-template-columns:1fr;gap:26px;padding:26px 22px}
+}
+
+/* ---------- musteri kayitlari ---------- */
+.facts3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.fact{background:var(--surface);padding:32px 28px 30px}
+.fact .big{font-family:"Fraunces",Georgia,serif;font-size:46px;line-height:1;color:var(--navy);
+  margin:0 0 14px;font-weight:600;letter-spacing:-.02em}
+.fact .big span{font-size:19px;color:var(--muted);font-weight:500;letter-spacing:0}
+.fact h3{font-size:16px;margin:0 0 9px;letter-spacing:-.005em}
+.fact p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
+.cnote{margin:26px 0 0;font-size:14px;color:var(--muted);max-width:62ch}
+
+
+
+/* ---------- portal girisi ---------- */
+.portal{min-height:calc(100vh - 68px);display:grid;grid-template-columns:repeat(3,1fr)}
+.pane{
+  position:relative;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:44px 34px 46px;text-decoration:none;color:#fff;overflow:hidden;
+  border-right:1px solid rgba(255,255,255,.14);min-height:420px;
+}
+.pane:last-child{border-right:0}
+.pane img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:grayscale(1) brightness(.44) contrast(1.05);
+  transform:scale(1.02);
+  transition:filter .55s ease, transform .8s cubic-bezier(.2,.7,.3,1);
+  z-index:0;
+}
+.pane::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(transparent 34%, rgba(9,22,30,.82));
+  transition:background .45s ease;
+}
+.pane > *{position:relative;z-index:2}
+.pane:hover img,.pane:focus-visible img{filter:grayscale(0) brightness(.72) contrast(1);transform:scale(1.07)}
+.pane:hover::after,.pane:focus-visible::after{background:linear-gradient(transparent 26%, rgba(9,22,30,.72))}
+.pane:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.pane .num{
+  font-family:"IBM Plex Mono","Fraunces",monospace;font-size:12px;letter-spacing:.2em;
+  color:rgba(255,255,255,.62);margin:0 0 auto;
+}
+.pane h2{
+  font-size:clamp(26px,3vw,36px);margin:0 0 10px;color:#fff;letter-spacing:-.02em;
+}
+.pane p{margin:0;font-size:15px;color:rgba(255,255,255,.82);max-width:30ch;line-height:1.55}
+.pane .go{
+  margin:20px 0 0;font-size:13.5px;font-weight:600;letter-spacing:.04em;
+  color:#fff;display:inline-flex;align-items:center;gap:8px;
+  opacity:.5;transition:opacity .35s ease, gap .35s ease;
+}
+.pane:hover .go,.pane:focus-visible .go{opacity:1;gap:14px}
+.portal-note{
+  padding:26px 24px 34px;text-align:center;font-size:14px;color:var(--muted);
+  background:var(--paper);
+}
+.portal-note strong{color:var(--ink)}
+
+nav .navlinks a.on{color:var(--navy);font-weight:600}
+
+/* ---------- bolum ust gorseli ---------- */
+.dhero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden}
+.dhero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.dhero::after{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(105deg,rgba(9,22,30,.88) 12%,rgba(9,22,30,.52) 62%,rgba(9,22,30,.3))}
+.dhero .wrap{position:relative;z-index:2;padding-top:56px;padding-bottom:52px}
+.dhero .eyebrow{color:#E8C8A8}
+.dhero h1{color:#fff;font-size:clamp(30px,5vw,52px);max-width:18ch}
+.dhero p{color:rgba(255,255,255,.86);max-width:54ch;margin:20px 0 0;font-size:17px}
+
+/* ---------- basit iki sutun ---------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.duo img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line)}
+.duo h3{font-size:22px;margin:0 0 14px}
+.duo p{color:var(--ink-2);margin:0 0 14px}
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.trio figure{margin:0}
+.trio img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);display:block}
+.trio figcaption{margin:12px 0 0;font-size:14.5px;color:var(--ink-2)}
+.trio h3{font-size:17px;margin:0 0 6px}
+
+.stat{border-left:2px solid var(--navy);padding:4px 0 4px 22px;margin:30px 0 0}
+.stat p{margin:0 0 10px;color:var(--ink-2)}
+.stat p:last-child{margin:0}
+
+@media (max-width:900px){
+  .portal{grid-template-columns:1fr;min-height:0}
+  .pane{border-right:0;border-bottom:1px solid rgba(255,255,255,.14);min-height:300px;padding:34px 24px 30px}
+  .pane img{filter:grayscale(.35) brightness(.5) contrast(1.02)}
+  .pane .go{opacity:1}
+  .duo{grid-template-columns:1fr;gap:24px}
+  .dhero{min-height:270px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="/" aria-label="Arcotra home"><img src="/img/logo-01.png" width="150" height="36" alt="Arcotra"></a>
+    <div class="navlinks" id="navlinks">
+      <a href="/architecture/" class="on">Architecture</a>
+      <a href="/construction/">Construction</a>
+      <a href="/trade/">Trade</a>
+      <a class="btn" href="https://wa.me/919289480963" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="herogrid">
+      <div>
+        <p class="eyebrow">3D interior design</p>
+        <h1>Let&rsquo;s design your <span class="rot"><span class="sizer">bungalow house</span><span class="word" style="animation-delay:0.0s">dream house</span><span class="word" style="animation-delay:2.4s">kitchen</span><span class="word" style="animation-delay:4.8s">living room</span><span class="word" style="animation-delay:7.2s">teen’s room</span><span class="word" style="animation-delay:9.6s">bungalow house</span></span></h1>
+        <p class="lede">Send us photos of the room. We design it in 3D, you see exactly how it will
+        look, and only then does anyone pick up a tool.</p>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/919289480963" target="_blank" rel="noopener">Start on WhatsApp</a>
+          <a class="btn ghost" href="#work">See our work</a>
+        </div>
+        <p class="note">A design studio in Noida, India &middot; we work with clients wherever they are</p>
+      </div>
+      <figure class="heroshot" style="margin:0">
+        <img src="/img/photo-01.jpg" alt="Open-plan living room and kitchen" width="900" height="720" fetchpriority="high">
+        <figcaption>Placeholder image &mdash; to be replaced with our own project visuals</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section id="rooms" class="alt">
+  <div class="wrap">
+    <div class="sechead rv">
+      <p class="eyebrow">For your home</p>
+      <h2>Start with one room, or design the whole house.</h2>
+      <p>Most people begin with the room that bothers them most. Others come to us before the
+      house is even built. Both are a good place to start.</p>
+    </div>
+    <div class="spaces rv">
+      <div class="space"><div class="pic"><img src="/img/photo-02.jpg" alt="Kitchen" loading="lazy" width="420" height="262"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h18M6 8V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M5 8v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12v5M14 12v5"/></svg><h3>Kitchen</h3><p>The room people ask about first. Layout, storage, worktops, lighting &mdash; planned around how you actually cook.</p></div></div><div class="space"><div class="pic"><img src="/img/photo-03.jpg" alt="Living room" loading="lazy" width="420" height="262"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3M3 11h18v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6ZM6 19v2M18 19v2"/></svg><h3>Living room</h3><p>Seating that works for the room you have, not the one in the catalogue. Light, flow, and where the television really goes.</p></div></div><div class="space"><div class="pic"><img src="/img/photo-04.jpg" alt="Bedroom" loading="lazy" width="420" height="262"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 12h18v6M21 18v-4a2 2 0 0 0-2-2H8V8a1 1 0 0 1 1-1h9M6.5 12a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg><h3>Bedroom</h3><p>Wardrobes that fit, light that suits the hour, and enough space left to move around the bed.</p></div></div><div class="space"><div class="pic"><img src="/img/photo-05.jpg" alt="Teen&rsquo;s room" loading="lazy" width="420" height="262"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20v-7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v7M4 20h16M16 20V9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v11M6.5 15h3M15 4.5h6M18 3v3"/></svg><h3>Teen&rsquo;s room</h3><p>A room that has to be a bedroom, a desk and somewhere to have friends over &mdash; and that its owner will want to change again in two years. We plan for that.</p></div></div><div class="space"><div class="pic"><img src="/img/photo-06.jpg" alt="Dream house" loading="lazy" width="420" height="262"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg><h3>Dream house</h3><p>The whole home designed at once, so the kitchen, the hallway and the bedrooms belong to the same house instead of five separate decisions.</p></div></div><div class="space"><div class="pic"><img src="/img/photo-07.jpg" alt="Bungalow house" loading="lazy" width="420" height="262"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 4l10 8M4 11v9h16v-9M9 20v-6h6v6M2 20h20"/></svg><h3>Bungalow house</h3><p>Single-storey living has its own logic: every room touches the garden, the roof is free to open up, and nothing is hidden behind a staircase.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sechead rv">
+      <p class="eyebrow">For institutions and businesses</p>
+      <h2>Buildings full of rooms are a different problem.</h2>
+      <p>A hostel is not a big house, and an academy is not a large office. Each one is solved
+      differently &mdash; and knowing that difference is most of the job.</p>
+    </div>
+    <div class="spaces rv">
+      <div class="space"><div class="pic"><img src="/img/photo-08.jpg" alt="Student hostels" loading="lazy" width="420" height="262"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20V5M3 11h11a3 3 0 0 1 3 3v6M3 20h18M17 20v-3M6.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM3 6h11a3 3 0 0 1 3 3"/></svg><h3>Student hostels</h3><p>A hundred rooms, not one. The work is repetition done well &mdash; the same standard in every room, storage for each bed, and common areas that hold the building together. Finishes are chosen for five years of heavy use, not for the photograph.</p></div></div><div class="space"><div class="pic"><img src="/img/photo-09.jpg" alt="Academies &amp; training centres" loading="lazy" width="420" height="262"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21h20M4 21V10M20 21V10M12 3 2.5 8.5h19L12 3ZM8 21V13M12 21V13M16 21V13"/></svg><h3>Academies &amp; training centres</h3><p>Classrooms, labs and staff rooms, plus the corridors that have to absorb everyone at once when a class ends. Acoustics, sightlines and daylight decide whether a room can actually be taught in.</p></div></div><div class="space"><div class="pic"><img src="/img/retail-bakery.jpg" alt="Offices &amp; retail" loading="lazy" width="560" height="609"></div><div class="txt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v15M15 10h4a1 1 0 0 1 1 1v10M2 21h20M7 9h2M7 13h2M7 17h2M18 14h.01M18 18h.01"/></svg><h3>Offices &amp; retail</h3><p>Workspaces and shops for the people who spend all day in them. Layout follows how the team really works, not the floor plan the landlord handed over.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="alt">
+  <div class="wrap">
+    <div class="sechead rv">
+      <p class="eyebrow">How it works</p>
+      <h2>You will see the room before you pay for a single tile.</h2>
+      <p>We often work with people we have never met in person, and it works well &mdash;
+      because everything is agreed on screen before anyone spends money. The building itself
+      stays in your hands; we stay available while it happens.</p>
+    </div>
+    <div class="steps rv">
+      <div class="step"><p class="n">01</p><h3>Tell us about the space</h3><p>Send photos, a floor plan, or even a rough sketch with measurements. A WhatsApp voice note works too.</p></div><div class="step"><p class="n">02</p><h3>We design it in 3D</h3><p>We plan the layout, choose materials and lighting, and build the room in three dimensions.</p></div><div class="step"><p class="n">03</p><h3>You see it before it exists</h3><p>Walk through realistic views of your own room. Change the worktop, move the island, try another colour — while it still costs nothing.</p></div><div class="step"><p class="n">04</p><h3>You get the drawings</h3><p>Final visuals and dimensioned drawings your builder or carpenter can work from &mdash; measurements, materials and finishes, all specified.</p></div><div class="step"><p class="n">05</p><h3>We stay reachable while it is built</h3><p>You run the build. We stay on the other end of the line: when your builder hits a question the drawings did not answer &mdash; and they always do &mdash; send a photo and ask. That is how the village house on this page went up.</p></div>
+    </div>
+
+    <div class="options rv">
+      <figure>
+        <img src="/img/kitchen-option-wood.jpg" alt="Kitchen design with a wooden worktop" loading="lazy" width="760" height="570">
+        <figcaption>Option A &mdash; timber worktop</figcaption>
+      </figure>
+      <figure>
+        <img src="/img/kitchen-option-stone.jpg" alt="Kitchen design with a stone worktop" loading="lazy" width="760" height="570">
+        <figcaption>Option B &mdash; stone worktop</figcaption>
+      </figure>
+      <p class="optnote">The same kitchen, two materials. Deciding here costs nothing; deciding
+      after the cabinets are made costs a great deal.</p>
+    </div>
+
+    <div class="planwrap rv">
+      <div><svg viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Floor plan drawing">
+  <g stroke="#184860" stroke-linecap="square">
+    <!-- dış duvar -->
+    <rect x="40" y="40" width="440" height="280" stroke-width="6"/>
+    <!-- iç bölmeler -->
+    <path d="M250 40 V180 M250 240 V320" stroke-width="4"/>
+    <path d="M250 180 H480" stroke-width="4"/>
+    <path d="M370 180 V320" stroke-width="4"/>
+    <!-- kapı boşlukları + yaylar -->
+    <path d="M250 180 v60" stroke-width="1.1" stroke-dasharray="3 3"/>
+    <path d="M250 240 a60 60 0 0 0 -60 -60" stroke-width="1.1"/>
+    <path d="M370 240 h-40" stroke-width="1.1" stroke-dasharray="3 3"/>
+    <path d="M330 240 a40 40 0 0 1 40 -40" stroke-width="1.1"/>
+    <!-- pencereler -->
+    <path d="M110 40 h90 M300 40 h110 M40 130 v70 M480 220 v60" stroke-width="7" stroke="#FBFAF7"/>
+    <path d="M110 40 h90 M300 40 h110 M40 130 v70 M480 220 v60" stroke-width="1.4"/>
+  </g>
+  <g stroke="#184860" stroke-width="1.4" opacity=".62">
+    <!-- mutfak tezgâhı + ada -->
+    <path d="M270 60 h190 v34 h-190 z"/>
+    <path d="M300 130 h120 v26 h-120 z"/>
+    <circle cx="332" cy="77" r="9"/><circle cx="360" cy="77" r="9"/>
+    <!-- oturma grubu -->
+    <path d="M70 210 h120 v46 H70 z"/>
+    <path d="M70 210 v46 M96 210 v46 M138 210 v46 M190 210 v46"/>
+    <path d="M96 120 h96 v40 H96 z"/>
+    <!-- yatak -->
+    <path d="M395 210 h64 v88 h-64 z"/>
+    <path d="M395 232 h64"/>
+    <!-- masa -->
+    <path d="M278 250 h72 v46 h-72 z"/>
+  </g>
+  <!-- ölçü çizgileri -->
+  <g stroke="#7C878E" stroke-width="1" font-family="Inter,Arial,sans-serif" font-size="11" fill="#7C878E">
+    <path d="M40 344 h440 M40 338 v12 M480 338 v12"/>
+    <text x="248" y="340" text-anchor="middle">11.40 m</text>
+    <path d="M18 40 v280 M12 40 h12 M12 320 h12"/>
+    <text x="14" y="186" text-anchor="middle" transform="rotate(-90 14 186)">7.20 m</text>
+  </g>
+  <g font-family="Inter,Arial,sans-serif" font-size="10.5" fill="#184860" letter-spacing=".9" opacity=".8">
+    <text x="70" y="70">LIVING</text>
+    <text x="272" y="112">KITCHEN</text>
+    <text x="278" y="212">DINING</text>
+    <text x="392" y="202">BEDROOM</text>
+  </g>
+</svg></div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:10px">Where it starts</p>
+        <h3>Every project begins as a plan.</h3>
+        <p>Before anything is rendered, the layout is worked out on paper: where the walls go,
+        which way the doors swing, how much room is left to walk around the table.</p>
+        <p>Get this part right and the rest follows. Get it wrong and no amount of
+        beautiful rendering will save the room.</p>
+        <p class="cap">Sample layout drawing &mdash; not from a client project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="alt">
+  <div class="wrap">
+    <div class="sechead rv">
+      <p class="eyebrow">Selected work</p>
+      <h2>Homes and workspaces we have designed.</h2>
+      <p>Most of our work comes from someone telling a friend. Projects are shown without client names &mdash; we ask before sharing anything.</p>
+    </div>
+    <div class="works">
+      <article class="work rv">
+      <div class="shot"><img src="/img/photo-11.jpg" alt="Dream house" loading="lazy" width="680" height="510"></div>
+      <div class="body">
+        <h3>Dream house</h3>
+        <p class="meta">Full home design</p>
+        <p>A complete home designed room by room, from the entrance through to the kitchen and living spaces.</p>
+      </div>
+    </article><article class="work rv">
+      <div class="shot"><img src="/img/work-village-kitchen.jpg" alt="Village home — kitchen design" loading="lazy" width="900" height="674"></div>
+      <div class="body">
+        <h3>Village home</h3>
+        <p class="meta">Private residence &middot; full home design</p>
+        <p>A single-storey village house designed from the plan up. The kitchen was worked out in
+        3D first, down to the worktop and the run of the cabinets, before anything was ordered.</p>
+      </div>
+    </article><article class="work rv">
+      <div class="shot"><img src="/img/photo-13.jpg" alt="Living spaces" loading="lazy" width="680" height="510"></div>
+      <div class="body">
+        <h3>Living spaces</h3>
+        <p class="meta">Interior consultation</p>
+        <p>Layout, materials and lighting for the main living spaces of a private home.</p>
+      </div>
+    </article><article class="work rv">
+      <div class="shot"><img src="/img/photo-14.jpg" alt="Family house" loading="lazy" width="680" height="510"></div>
+      <div class="body">
+        <h3>Family house</h3>
+        <p class="meta">Full home design</p>
+        <p>A house designed in 3D before a single wall was built, so every decision could be seen first.</p>
+      </div>
+    </article><article class="work rv">
+      <div class="shot"><img src="/img/work-dyn-grocery.jpg" alt="Retail shelving catalogue render — grocery aisle" loading="lazy" width="900" height="805"></div>
+      <div class="body">
+        <h3>Retail shelving catalogue</h3>
+        <p class="meta">Product visualisation &middot; shelving manufacturer</p>
+        <p>Ten shelving units, each rendered inside the kind of shop it is actually sold for &mdash;
+        stocked, lit and signed. An empty steel frame tells a buyer nothing; a full aisle tells them
+        everything.</p>
+      </div>
+    </article><article class="work rv">
+      <div class="shot"><img src="/img/work-dyn-beauty.jpg" alt="Retail shelving catalogue render — beauty and care display" loading="lazy" width="900" height="805"></div>
+      <div class="body">
+        <h3>Beauty retail display</h3>
+        <p class="meta">Product visualisation &middot; shelving manufacturer</p>
+        <p>The same unit family shown for a different trade. Narrow shelves, pale finishes and
+        cosmetics instead of cereal boxes &mdash; so a beauty retailer sees their own shop, not
+        someone else&rsquo;s.</p>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="about">
+  <div class="wrap">
+    <div class="about rv">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 style="font-size:clamp(26px,3.6vw,36px);margin:0 0 22px">A small studio that takes on a few projects at a time.</h2>
+        <p>Arcotra is a design studio in Noida, India. We design interiors in 3D &mdash; kitchens,
+        living rooms, bedrooms and complete homes &mdash; and hand over drawings that a builder
+        can work from, wherever the project is.</p>
+        <p>Alongside homes we design <strong>student hostels and academies</strong> &mdash; work where
+        the challenge is repetition and wear rather than one perfect room.</p>
+        <p>We are deliberately small. That means you talk to the person doing the design,
+        and it means we take on a few projects at a time rather than many at once.</p>
+        <p><strong>Nearly all of our clients come through someone they trust.</strong> We would rather
+        keep it that way than chase volume.</p>
+      </div>
+      <div class="facts">
+        <dl>
+          <dt>Registered</dt><dd>ARCOTRA PRIVATE LIMITED</dd>
+          <dt>Incorporated</dt><dd>30 June 2025</dd>
+          <dt>CIN</dt><dd>U74109UP2025PTC227082</dd>
+          <dt>GSTIN</dt><dd>09ABDCA2146E1Z0</dd>
+          <dt>Studio</dt><dd>A-64, 2nd &amp; 3rd Floor<br>Sector 63, Noida<br>Uttar Pradesh 201301, India</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact rv">
+      <h2>Let&rsquo;s design something you actually want to come home to.</h2>
+      <p>Tell us about the room. A few photos and a rough idea of what bothers you
+      is enough to start.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/919289480963" target="_blank" rel="noopener">Message on WhatsApp</a>
+        <a class="btn ghost" href="mailto:info@arcotratrade.com">info@arcotratrade.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <img src="/img/logo-02.png" width="130" height="31" alt="Arcotra">
+        <p style="margin:0;max-width:32ch">Architecture, construction consultancy and trade.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h4>Divisions</h4>
+          <ul>
+            <li><a href="/architecture/">Architecture</a></li>
+            <li><a href="/construction/">Construction</a></li>
+            <li><a href="/trade/">Trade</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@arcotratrade.com">info@arcotratrade.com</a></li>
+            <li><a href="https://wa.me/919289480963" target="_blank" rel="noopener">+91 92894 80963</a></li>
+            <li>Sector 63, Noida<br>Uttar Pradesh, India</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Arcotra Private Limited</span>
+      <span>CIN U74109UP2025PTC227082 &nbsp;&middot;&nbsp; GSTIN 09ABDCA2146E1Z0</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  "use strict";
+  var btn = document.getElementById("menuBtn"), links = document.getElementById("navlinks");
+  if (btn && links) {
+    btn.addEventListener("click", function(){
+      var open = links.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    links.addEventListener("click", function(e){
+      if (e.target.tagName === "A") { links.classList.remove("open"); btn.setAttribute("aria-expanded","false"); }
+    });
+  }
+  var items = document.querySelectorAll(".rv");
+  if (!("IntersectionObserver" in window)) { items.forEach(function(el){ el.classList.add("in"); }); return; }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: .08 });
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
