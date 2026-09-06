@@ -3,434 +3,94 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Construction consultancy &amp; renovation — Arcotra</title>
-<meta name="description" content="Renovation projects designed in 3D and consultancy through the build. You run the site; we stay reachable.">
+<title>Construction — Arcotra | Built to the drawings, against a programme.</title>
+<meta name="description" content="New build, renovation and turnkey delivery. The drawings tell you what it should be; the programme and the cost plan tell you whether it will actually happen ">
 <link rel="canonical" href="https://arcotratrade.com/construction/">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<meta name="theme-color" content="#184860">
+<meta name="theme-color" content="#173F55">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Arcotra">
-<meta property="og:title" content="Construction consultancy &amp; renovation — Arcotra">
-<meta property="og:description" content="Renovation projects designed in 3D and consultancy through the build. You run the site; we stay reachable.">
+<meta property="og:title" content="Construction — Arcotra | Built to the drawings, against a programme.">
+<meta property="og:description" content="New build, renovation and turnkey delivery. The drawings tell you what it should be; the programme and the cost plan tell you whether it will actually happen ">
 <meta property="og:url" content="https://arcotratrade.com/construction/">
-<meta property="og:image" content="https://arcotratrade.com/img/share-card.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://arcotratrade.com/img/panel-construction-v2.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://arcotratrade.com/img/share-card.jpg">
+<meta name="twitter:image" content="https://arcotratrade.com/img/panel-construction-v2.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
-<style>
-
-*,*::before,*::after{box-sizing:border-box}
-:root{
-  --navy:#184860; --navy-d:#0F3245; --ink:#242A2E; --ink-2:#4E585F;
-  --muted:#7C878E; --line:#E2E5E4; --line-2:#CFD5D4;
-  --paper:#FBFAF7; --surface:#FFFFFF; --warm:#F2EEE6; --accent:#B5643A;
-  --r:4px; --max:1120px;
-}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  margin:0;background:var(--paper);color:var(--ink);
-  font:400 17px/1.65 "Inter","Helvetica Neue",Arial,sans-serif;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.02em;margin:0;line-height:1.12}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-.eyebrow{
-  font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--accent);margin:0 0 14px;
-}
-
-/* ---------- nav ---------- */
-nav{
-  position:sticky;top:0;z-index:60;background:rgba(251,250,247,.88);
-  backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);
-}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
-nav img{height:32px;width:auto}
-.navlinks{display:flex;gap:30px;align-items:center}
-.navlinks a{
-  text-decoration:none;font-size:14.5px;color:var(--ink-2);font-weight:500;
-  transition:color .18s;
-}
-.navlinks a:hover{color:var(--navy)}
-.navlinks a.btn{color:#fff}
-.navlinks a.btn:hover{color:#fff}
-.btn{
-  display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;
-  text-decoration:none;font-size:14.5px;font-weight:600;padding:11px 20px;
-  border-radius:100px;transition:background .18s,transform .18s;white-space:nowrap;
-}
-.btn:hover{background:var(--navy-d);transform:translateY(-1px)}
-.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--line-2)}
-.btn.ghost:hover{background:#fff;border-color:var(--navy)}
-.menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer}
-.menu-btn span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:.2s}
-
-/* ---------- hero ---------- */
-.hero{padding:88px 0 76px;position:relative;overflow:hidden}
-.hero::after{
-  content:"";position:absolute;inset:auto -10% -40% 40%;height:520px;
-  background:radial-gradient(closest-side,rgba(24,72,96,.07),transparent 70%);
-  pointer-events:none;
-}
-.hero h1{font-size:clamp(38px,7vw,72px);max-width:16ch}
-.rot{color:var(--navy);display:inline-block;position:relative}
-.rot .word{
-  position:absolute;left:0;top:0;          /* hepsi ayni noktada ust uste */
-  opacity:0;transform:translateY(.32em);
-  animation:cyc 12s infinite;white-space:nowrap;
-}
-.rot .sizer{visibility:hidden;pointer-events:none}   /* genisligi ve taban cizgisini belirler */
-@keyframes cyc{
-  0%,2%{opacity:0;transform:translateY(.32em)}
-  6%,22%{opacity:1;transform:translateY(0)}
-  27%,100%{opacity:0;transform:translateY(-.28em)}
-}
-@media (prefers-reduced-motion:reduce){
-  .rot .word{animation:none;opacity:0}
-  .rot .word:nth-child(2){opacity:1;transform:none}   /* 1. cocuk .sizer */
-}
-.hero p.lede{
-  font-size:clamp(17px,2.1vw,20px);color:var(--ink-2);max-width:52ch;margin:26px 0 34px;
-}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.hero .note{font-size:14px;color:var(--muted);margin:22px 0 0}
-
-/* ---------- şeritler ---------- */
-section{padding:82px 0}
-section.alt{background:var(--warm)}
-.sechead{max-width:60ch;margin:0 0 46px}
-.sechead h2{font-size:clamp(27px,4vw,40px)}
-.sechead p{color:var(--ink-2);margin:16px 0 0;font-size:17px}
-
-/* ---------- mekânlar ---------- */
-.spaces{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.space{background:var(--surface);padding:30px 26px;transition:background .2s}
-.space:hover{background:#fff}
-.space .ic{width:30px;height:30px;color:var(--navy);margin:0 0 16px}
-.space h3{font-size:19px;margin:0 0 8px}
-.space p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
-
-/* ---------- adımlar ---------- */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px}
-.step .n{
-  font-family:"Fraunces",Georgia,serif;font-size:40px;color:var(--line-2);
-  line-height:1;margin:0 0 12px;font-weight:600;
-}
-.step h3{font-size:18px;margin:0 0 8px}
-.step p{margin:0;font-size:15.5px;color:var(--ink-2)}
-
-/* ---------- işler ---------- */
-.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
-.work{
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  overflow:hidden;transition:transform .22s,box-shadow .22s;
-}
-.work:hover{transform:translateY(-3px);box-shadow:0 14px 34px -20px rgba(24,42,52,.35)}
-.shot{
-  aspect-ratio:4/3;background:var(--warm);display:flex;align-items:center;justify-content:center;
-  border-bottom:1px solid var(--line);position:relative;
-}
-.shot img{width:100%;height:100%;object-fit:cover}
-.ph{text-align:center;color:var(--muted);padding:20px}
-.ph svg{width:34px;height:34px;opacity:.5;margin:0 auto 10px}
-.ph span{font-size:12.5px;letter-spacing:.04em;display:block;line-height:1.5}
-.work .body{padding:22px 24px 26px}
-.work h3{font-size:19px;margin:0 0 5px}
-.work .meta{font-size:13.5px;color:var(--muted);margin:0 0 12px}
-.work p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
-
-/* ---------- hakkında ---------- */
-.about{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:start}
-.about p{color:var(--ink-2);margin:0 0 18px}
-.about p strong{color:var(--ink)}
-.facts{border-left:2px solid var(--navy);padding:2px 0 2px 24px}
-.facts dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:14.5px}
-.facts dt{color:var(--muted)}
-.facts dd{margin:0;font-weight:500}
-
-/* ---------- iletişim ---------- */
-.contact{background:var(--navy);color:#fff;border-radius:var(--r);padding:60px 48px;text-align:center}
-.contact h2{font-size:clamp(28px,4.4vw,42px);color:#fff;max-width:18ch;margin:0 auto}
-.contact p{color:rgba(255,255,255,.78);max-width:46ch;margin:20px auto 30px;font-size:17px}
-.contact .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.contact .btn{background:#fff;color:var(--navy)}
-.contact .btn:hover{background:var(--warm)}
-.contact .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
-.contact .btn.ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
-
-/* ---------- alt ---------- */
-footer{border-top:1px solid var(--line);padding:46px 0 40px;font-size:14px;color:var(--muted)}
-footer .top{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;margin:0 0 30px}
-footer img{height:28px;width:auto;margin:0 0 14px}
-footer a{color:var(--ink-2);text-decoration:none}
-footer a:hover{color:var(--navy)}
-footer .cols{display:flex;gap:56px;flex-wrap:wrap}
-footer h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin:0 0 12px;font-weight:600}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-footer .legal{border-top:1px solid var(--line);padding:20px 0 0;display:flex;
-  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px}
-
-/* ---------- görünürlük animasyonu ---------- */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-
-/* ---------- mobil ---------- */
-@media (max-width:860px){
-  .about{grid-template-columns:1fr;gap:36px}
-}
-@media (max-width:720px){
-  body{font-size:16px}
-  section{padding:60px 0}
-  .hero{padding:56px 0 52px}
-  .menu-btn{display:block}
-  .navlinks{
-    position:fixed;inset:68px 0 auto;background:var(--paper);flex-direction:column;
-    align-items:stretch;gap:0;padding:10px 24px 26px;border-bottom:1px solid var(--line);
-    transform:translateY(-120%);transition:transform .28s ease;
-  }
-  .navlinks.open{transform:none}
-  .navlinks a{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
-  .navlinks .btn{margin:16px 0 0;justify-content:center;border-bottom:0}
-  .contact{padding:44px 24px}
-  footer .cols{gap:32px}
-}
-
-/* ---------- hero görseli ---------- */
-.herogrid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.heroshot{
-  position:relative;border-radius:var(--r);overflow:hidden;
-  box-shadow:0 26px 60px -34px rgba(16,34,44,.55);
-}
-.heroshot img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.2}
-.heroshot figcaption{
-  position:absolute;left:0;right:0;bottom:0;padding:34px 20px 14px;
-  background:linear-gradient(transparent,rgba(10,24,32,.72));
-  color:rgba(255,255,255,.9);font-size:12.5px;letter-spacing:.03em;
-}
-
-/* ---------- mekân kartı görseli ---------- */
-.space{padding:0;display:flex;flex-direction:column}
-.space .pic{aspect-ratio:16/10;overflow:hidden;background:var(--warm)}
-.space .pic img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.space:hover .pic img{transform:scale(1.04)}
-.space .txt{padding:22px 24px 26px}
-.space .ic{width:26px;height:26px;margin:0 0 12px}
-
-/* ---------- plan çizimi ---------- */
-.options{margin:52px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.options figure{margin:0}
-.options img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);display:block}
-.options figcaption{margin:10px 0 0;font-size:13px;color:var(--muted);letter-spacing:.02em}
-.optnote{grid-column:1/-1;margin:6px 0 0;font-size:15px;color:var(--ink-2);max-width:60ch}
-@media (max-width:720px){.options{grid-template-columns:1fr;gap:18px}}
-
-.planwrap{
-  margin:52px 0 0;background:var(--surface);border:1px solid var(--line);
-  border-radius:var(--r);padding:36px 40px;display:grid;
-  grid-template-columns:1fr 1.15fr;gap:44px;align-items:center;
-}
-.planwrap svg{width:100%;height:auto}
-.planwrap h3{font-size:21px;margin:0 0 12px}
-.planwrap p{margin:0 0 14px;color:var(--ink-2);font-size:15.5px}
-.planwrap .cap{font-size:12.5px;color:var(--muted);margin:0}
-
-@media (max-width:900px){
-  .herogrid{grid-template-columns:1fr;gap:34px}
-  .planwrap{grid-template-columns:1fr;gap:26px;padding:26px 22px}
-}
-
-/* ---------- musteri kayitlari ---------- */
-.facts3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.fact{background:var(--surface);padding:32px 28px 30px}
-.fact .big{font-family:"Fraunces",Georgia,serif;font-size:46px;line-height:1;color:var(--navy);
-  margin:0 0 14px;font-weight:600;letter-spacing:-.02em}
-.fact .big span{font-size:19px;color:var(--muted);font-weight:500;letter-spacing:0}
-.fact h3{font-size:16px;margin:0 0 9px;letter-spacing:-.005em}
-.fact p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
-.cnote{margin:26px 0 0;font-size:14px;color:var(--muted);max-width:62ch}
-
-
-
-/* ---------- portal girisi ---------- */
-.portal{min-height:calc(100vh - 68px);display:grid;grid-template-columns:repeat(3,1fr)}
-.pane{
-  position:relative;display:flex;flex-direction:column;justify-content:flex-end;
-  padding:44px 34px 46px;text-decoration:none;color:#fff;overflow:hidden;
-  border-right:1px solid rgba(255,255,255,.14);min-height:420px;
-}
-.pane:last-child{border-right:0}
-.pane img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  filter:grayscale(1) brightness(.44) contrast(1.05);
-  transform:scale(1.02);
-  transition:filter .55s ease, transform .8s cubic-bezier(.2,.7,.3,1);
-  z-index:0;
-}
-.pane::after{
-  content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(transparent 34%, rgba(9,22,30,.82));
-  transition:background .45s ease;
-}
-.pane > *{position:relative;z-index:2}
-.pane:hover img,.pane:focus-visible img{filter:grayscale(0) brightness(.72) contrast(1);transform:scale(1.07)}
-.pane:hover::after,.pane:focus-visible::after{background:linear-gradient(transparent 26%, rgba(9,22,30,.72))}
-.pane:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
-.pane .num{
-  font-family:"IBM Plex Mono","Fraunces",monospace;font-size:12px;letter-spacing:.2em;
-  color:rgba(255,255,255,.62);margin:0 0 auto;
-}
-.pane h2{
-  font-size:clamp(26px,3vw,36px);margin:0 0 10px;color:#fff;letter-spacing:-.02em;
-}
-.pane p{margin:0;font-size:15px;color:rgba(255,255,255,.82);max-width:30ch;line-height:1.55}
-.pane .go{
-  margin:20px 0 0;font-size:13.5px;font-weight:600;letter-spacing:.04em;
-  color:#fff;display:inline-flex;align-items:center;gap:8px;
-  opacity:.5;transition:opacity .35s ease, gap .35s ease;
-}
-.pane:hover .go,.pane:focus-visible .go{opacity:1;gap:14px}
-.portal-note{
-  padding:26px 24px 34px;text-align:center;font-size:14px;color:var(--muted);
-  background:var(--paper);
-}
-.portal-note strong{color:var(--ink)}
-
-nav .navlinks a.on{color:var(--navy);font-weight:600}
-
-/* ---------- bolum ust gorseli ---------- */
-.dhero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden}
-.dhero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.dhero::after{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(105deg,rgba(9,22,30,.88) 12%,rgba(9,22,30,.52) 62%,rgba(9,22,30,.3))}
-.dhero .wrap{position:relative;z-index:2;padding-top:56px;padding-bottom:52px}
-.dhero .eyebrow{color:#E8C8A8}
-.dhero h1{color:#fff;font-size:clamp(30px,5vw,52px);max-width:18ch}
-.dhero p{color:rgba(255,255,255,.86);max-width:54ch;margin:20px 0 0;font-size:17px}
-
-/* ---------- basit iki sutun ---------- */
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
-.duo img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line)}
-.duo h3{font-size:22px;margin:0 0 14px}
-.duo p{color:var(--ink-2);margin:0 0 14px}
-.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-.trio figure{margin:0}
-.trio img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);display:block}
-.trio figcaption{margin:12px 0 0;font-size:14.5px;color:var(--ink-2)}
-.trio h3{font-size:17px;margin:0 0 6px}
-
-.stat{border-left:2px solid var(--navy);padding:4px 0 4px 22px;margin:30px 0 0}
-.stat p{margin:0 0 10px;color:var(--ink-2)}
-.stat p:last-child{margin:0}
-
-@media (max-width:900px){
-  .portal{grid-template-columns:1fr;min-height:0}
-  .pane{border-right:0;border-bottom:1px solid rgba(255,255,255,.14);min-height:300px;padding:34px 24px 30px}
-  .pane img{filter:grayscale(.35) brightness(.5) contrast(1.02)}
-  .pane .go{opacity:1}
-  .duo{grid-template-columns:1fr;gap:24px}
-  .dhero{min-height:270px}
-}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <nav>
   <div class="wrap">
-    <a href="/" aria-label="Arcotra home"><img src="/img/logo-01.png" width="150" height="36" alt="Arcotra"></a>
+    <a href="/" aria-label="Arcotra — home"><img src="/img/logo-01.png" width="150" height="36" alt="Arcotra"></a>
     <div class="navlinks" id="navlinks">
       <a href="/architecture/">Architecture</a>
       <a href="/construction/" class="on">Construction</a>
       <a href="/trade/">Trade</a>
-      <a class="btn" href="https://wa.me/919289480963" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="/enquiry/">Enquire</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
       <span></span><span></span><span></span>
     </button>
   </div>
-</nav>
-<header class="dhero">
-  <img src="/img/panel-construction-v2.jpg" alt="A house being renovated" width="1100" height="732" fetchpriority="high">
+</nav><div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><b>Construction</b></nav></div>
+<header class="phead">
   <div class="wrap">
-    <p class="eyebrow">Construction</p>
-    <h1>Renovation, planned before the first wall comes down.</h1>
-    <p>Old houses hide things. We design the change first, in three dimensions, and stay with you
-    while your builder carries it out.</p>
+    <p class="eyebrow">02 &mdash; CONSTRUCTION</p>
+    <h1>Built to the drawings, against a programme.</h1>
+    <p>New build, renovation and turnkey delivery. The drawings tell you what it should be; the programme and the cost plan tell you whether it will actually happen that way.</p>
   </div>
 </header>
 
-<section>
+<main class="panels of5">
+      <a class="panel" href="/construction/residential-construction/">
+        <img src="/img/panel-construction-v2.jpg" alt="Residential Construction — Houses and apartments built to the drawings — costed, scheduled and de" width="900" height="1200" loading="lazy">
+        <p class="num">01</p>
+        <h2>Residential Construction</h2>
+        <p>Houses and apartments built to the drawings — costed, scheduled and delivered.</p>
+        <span class="go">View service &rarr;</span>
+      </a>
+      <a class="panel" href="/construction/commercial-construction/">
+        <img src="/img/photo-08.jpg" alt="Commercial Construction — Offices, retail and institutional buildings, delivered against a progr" width="900" height="1200" loading="lazy">
+        <p class="num">02</p>
+        <h2>Commercial Construction</h2>
+        <p>Offices, retail and institutional buildings, delivered against a programme.</p>
+        <span class="go">View service &rarr;</span>
+      </a>
+      <a class="panel" href="/construction/renovation/">
+        <img src="/img/photo-01.jpg" alt="Renovation — Old houses, tired flats and buildings that need to work differently th" width="900" height="1200" loading="lazy">
+        <p class="num">03</p>
+        <h2>Renovation</h2>
+        <p>Old houses, tired flats and buildings that need to work differently than they do now.</p>
+        <span class="go">View service &rarr;</span>
+      </a>
+      <a class="panel" href="/construction/project-management/">
+        <img src="/img/cons-drawing.jpg" alt="Project Management — You hold the contracts; we run the programme, the trades and the quali" width="900" height="1200" loading="lazy">
+        <p class="num">04</p>
+        <h2>Project Management</h2>
+        <p>You hold the contracts; we run the programme, the trades and the quality on your behalf.</p>
+        <span class="go">View service &rarr;</span>
+      </a>
+      <a class="panel" href="/construction/turnkey-projects/">
+        <img src="/img/cons-bedroom.jpg" alt="Turnkey Projects — Design, build and finish under one contract — you hand over a plot and" width="900" height="1200" loading="lazy">
+        <p class="num">05</p>
+        <h2>Turnkey Projects</h2>
+        <p>Design, build and finish under one contract — you hand over a plot and receive a building.</p>
+        <span class="go">View service &rarr;</span>
+      </a>
+</main>
+
+<section class="tight">
   <div class="wrap">
-    <div class="sechead rv">
-      <p class="eyebrow">What we do</p>
-      <h2>We design the work. You build it.</h2>
-      <p>Arcotra is a design practice, not a contractor. We do not employ site crews and we do not
-      take on the build &mdash; that stays with you and the trades you trust. What we bring is the
-      part that decides whether the work goes well: the plan, and someone to ask.</p>
-    </div>
-
-    <div class="duo rv">
-      <img src="/img/cons-drawing.jpg" alt="Drawing renovation plans" width="760" height="427" loading="lazy">
-      <div>
-        <h3>Renovation design</h3>
-        <p>Old homes, village houses, tired flats. We measure what is there, work out what can move
-        and what cannot, and draw the result properly &mdash; dimensions, materials, finishes.</p>
-        <p>Walls that can come out, plumbing that has to be re-run, a kitchen that no longer fits the
-        family: these are decided on paper, where changing your mind is free.</p>
-      </div>
-    </div>
-
-    <div class="stat rv">
-      <p><strong>Why this matters on a renovation more than a new build:</strong> in a new house the
-      drawings describe empty ground. In a renovation they describe something that already exists,
-      often not quite the way the old plans say it does.</p>
-      <p>Surprises are normal. Having them answered in a drawing rather than by three people
-      standing in the dust arguing is what keeps a renovation on budget.</p>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="sechead rv">
-      <p class="eyebrow">Through the build</p>
-      <h2>You will not be left with a drawing and no one to ask.</h2>
-      <p>Your builder will hit questions the drawings did not answer. They always do.
-      Send a photo, ask, and we will tell you what was meant.</p>
-    </div>
-    <div class="trio rv">
-      <figure>
-        <img src="/img/cons-bathroom.jpg" alt="Finished bathroom after renovation" width="760" height="507" loading="lazy">
-        <figcaption><h3>Bathrooms and wet areas</h3>The rooms where a mistake is most expensive to undo.</figcaption>
-      </figure>
-      <figure>
-        <img src="/img/cons-bedroom.jpg" alt="Finished bedroom after renovation" width="760" height="760" loading="lazy">
-        <figcaption><h3>Room by room</h3>Take one room at a time, or plan the whole house and phase the work.</figcaption>
-      </figure>
-      <figure>
-        <img src="/img/work-village-kitchen.jpg" alt="Kitchen designed in 3D" width="900" height="674" loading="lazy">
-        <figcaption><h3>Kitchens</h3>Worked out in 3D down to the worktop before anything is ordered.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="contact rv">
-      <h2>Thinking about a renovation?</h2>
-      <p>Send photos of the space and tell us what bothers you about it. That is enough to start.</p>
-      <div class="cta">
-        <a class="btn" href="https://wa.me/919289480963" target="_blank" rel="noopener">Message on WhatsApp</a>
-        <a class="btn ghost" href="mailto:info@arcotratrade.com">info@arcotratrade.com</a>
+    <div class="cta rv">
+      <h2>Not sure which one you need?</h2>
+      <p>Describe the project in a sentence or two and we will tell you where it fits.</p>
+      <div class="row">
+        <a class="btn lg" href="/enquiry/?c=construction">Request a quotation</a>
+        <a class="btn lg ghost" href="https://wa.me/919289480963" target="_blank" rel="noopener">Message on WhatsApp</a>
       </div>
     </div>
   </div>
@@ -440,53 +100,25 @@ nav .navlinks a.on{color:var(--navy);font-weight:600}
     <div class="top">
       <div>
         <img src="/img/logo-02.png" width="130" height="31" alt="Arcotra">
-        <p style="margin:0;max-width:32ch">Architecture, construction consultancy and trade.</p>
+        <p style="margin:0;max-width:34ch">Architecture, construction and trade.<br>Noida, India &mdash; working internationally.</p>
       </div>
       <div class="cols">
-        <div>
-          <h4>Divisions</h4>
-          <ul>
-            <li><a href="/architecture/">Architecture</a></li>
-            <li><a href="/construction/">Construction</a></li>
-            <li><a href="/trade/">Trade</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@arcotratrade.com">info@arcotratrade.com</a></li>
-            <li><a href="https://wa.me/919289480963" target="_blank" rel="noopener">+91 92894 80963</a></li>
-            <li>Sector 63, Noida<br>Uttar Pradesh, India</li>
-          </ul>
-        </div>
+        <div><h4>Divisions</h4><ul><li><a href="/architecture/">Architecture</a></li><li><a href="/construction/">Construction</a></li><li><a href="/trade/">Trade</a></li></ul></div>
+        <div><h4>Enquiries</h4><ul>
+          <li><a href="/enquiry/">Request a quotation</a></li>
+          <li><a href="https://wa.me/919289480963" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:info@arcotratrade.com">info@arcotratrade.com</a></li>
+        </ul></div>
+        <div><h4>Office</h4><ul><li>A-64, 2nd &amp; 3rd Floor<br>Sector 63, Noida<br>Uttar Pradesh 201301, India</li>
+          <li><a href="tel:+919289480963">+91 92894 80963</a></li></ul></div>
       </div>
     </div>
     <div class="legal">
-      <span>&copy; 2026 Arcotra Private Limited</span>
+      <span>&copy; 2026 ARCOTRA PRIVATE LIMITED</span>
       <span>CIN U74109UP2025PTC227082 &nbsp;&middot;&nbsp; GSTIN 09ABDCA2146E1Z0</span>
     </div>
   </div>
 </footer>
-<script>
-(function(){
-  "use strict";
-  var btn = document.getElementById("menuBtn"), links = document.getElementById("navlinks");
-  if (btn && links) {
-    btn.addEventListener("click", function(){
-      var open = links.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    links.addEventListener("click", function(e){
-      if (e.target.tagName === "A") { links.classList.remove("open"); btn.setAttribute("aria-expanded","false"); }
-    });
-  }
-  var items = document.querySelectorAll(".rv");
-  if (!("IntersectionObserver" in window)) { items.forEach(function(el){ el.classList.add("in"); }); return; }
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
-  }, { rootMargin: "0px 0px -8% 0px", threshold: .08 });
-  items.forEach(function(el){ io.observe(el); });
-})();
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
