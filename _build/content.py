@@ -17,8 +17,8 @@ SIRKET = {
 ARCH = [
  dict(slug="dream-house-design", num="01", ad="Dream House Design",
    gorsel="/img/panel-architecture-v2.jpg",
-   kart="A house designed from the plot up — planned, drawn and shown in 3D before it is built.",
-   basli="A house designed from the ground up.",
+   kart="A house designed from the plot up: planned, drawn and shown in 3D before it is built.",
+   basli="A house designed from the plot up.",
    giris="Most people come to us with a plot, a rough idea and a budget. We turn that into a "
          "buildable design: floor plans that work for how your family actually lives, elevations "
          "you can picture, and 3D views that let you walk through the house before a foundation "
@@ -46,8 +46,8 @@ ARCH = [
  dict(slug="exterior-design", num="02", ad="Exterior House Design",
    gorsel="/img/photo-01.jpg",
    kart="Facades, elevations and the way a building meets the street, the light and the garden.",
-   basli="The face a building shows the world.",
-   giris="Sometimes the plan is fixed — the house exists, or the layout is already decided — and "
+   basli="Facades, elevations and how a building meets its plot.",
+   giris="Sometimes the plan is already fixed: the house exists, or the layout is decided, and "
          "what needs work is the outside. Facade composition, materials, openings, roof line, "
          "and how the building sits in its plot.",
    surec=[("Discovery","What is already built or decided, and what you want the building to say."),
@@ -65,9 +65,9 @@ ARCH = [
 
  dict(slug="interior-design", num="03", ad="Room &amp; Interior Design",
    gorsel="/img/work-village-kitchen.jpg",
-   kart="One room or the whole home — layout, materials, lighting and joinery, resolved in 3D.",
+   kart="One room or the whole home: layout, materials, lighting and joinery, resolved in 3D.",
    basli="Start with one room, or design the whole home.",
-   giris="Most people begin with the room that bothers them most — usually the kitchen. That is a "
+   giris="Most people begin with the room that bothers them most, usually the kitchen. That is a "
          "perfectly good place to start. We plan the layout, choose materials and lighting, and "
          "build the room in three dimensions so you can change your mind while it is still free.",
    surec=[("Discovery","We understand what you want, and what is not working in the space today."),
@@ -85,14 +85,48 @@ ARCH = [
            "Preferred style","Furniture that must fit","Material preferences","Budget range"]),
    cta=("Design your room","Send photographs and rough dimensions. A WhatsApp voice note works too.")),
 
- dict(slug="3d-visualisation", num="04", ad="3D Visualisation",
+ dict(slug="interior-visualisation", num="04", ad="Interior Visualisation",
+   gorsel="/img/work-dyn-grocery.jpg",
+   kart="Your design, your product, your space, rendered as it will look in use.",
+   basli="Showing a space that does not exist yet.",
+   giris="Sometimes the design is already settled and what is missing is the picture. A "
+         "manufacturer needs their product shown in the shop it is sold for. A developer needs an "
+         "apartment shown furnished. A designer needs their own scheme rendered properly. We build "
+         "the space in 3D and light it so it reads as a photograph.",
+   surec=[("Brief","What the images are for and who decides from them. A brochure image and a "
+           "client approval image are framed differently."),
+          ("What you send","Drawings, a sketch, product dimensions, or photographs of the real "
+           "space. We work from whatever exists."),
+          ("Materials &amp; setting","Finishes, lighting and the kind of room it belongs in. "
+           "A shelving unit in a bakery is not the same picture as the same unit in a pharmacy."),
+          ("Layout &amp; camera","We block out the scene and agree the views from a rough draft, "
+           "before anything is lit."),
+          ("Lighting &amp; dressing","The stage that decides whether it looks real. Light "
+           "direction, reflections, and the objects that make a room look lived in."),
+          ("Delivery","Full-resolution images plus one round of minor revisions.")],
+   hazir=("What we need from you","",
+          ["Product or room dimensions","Drawings or photographs","Material and finish details",
+           "The setting it belongs in","Reference images you like","Number of views",
+           "Output size and format","Whether text or branding goes on the image"]),
+   bilgi=[("Retail and product","A shelving manufacturer&rsquo;s range shown stocked and lit in "
+           "the shop it is sold for. An empty steel frame tells a buyer nothing; a full aisle "
+           "tells them everything."),
+          ("Residential interiors","Apartments and houses shown furnished, so a buyer can picture "
+           "living there before the plaster is dry."),
+          ("Material options","The same room rendered with two worktops or three floor finishes, "
+           "so the decision is made on screen instead of after the joinery is built."),
+          ("Output","Still images at print or web resolution, in the aspect ratio you need for "
+           "catalogues, listings or presentations.")],
+   cta=("Get your space visualised","Send the product or the drawings and tell us where it belongs.")),
+
+ dict(slug="3d-visualisation", num="05", ad="3D Visualisation",
    gorsel="/img/kitchen-option-stone.jpg",
-   kart="Photoreal views produced from your drawings — for clients, approvals or your own decisions.",
-   basli="Drawings other people can actually read.",
-   giris="If you already have the design — your own, or from another architect — we produce the "
-         "images that make it understandable. Developers use them to sell, architects to present, "
-         "families to decide. The work is the same: get the light, the materials and the framing "
-         "right.",
+   kart="Buildings rendered from architectural drawings, for approvals, investors or sales.",
+   basli="Buildings, rendered from architectural drawings.",
+   giris="Architectural renders: the building seen from outside, in its setting, at the hour that "
+         "shows it best. Developers use them to sell before a foundation is poured, architects to "
+         "present, planning committees to decide. For interiors and products in a space, see "
+         "Interior Visualisation.",
    surec=[("Brief","What the images are for, and who will look at them. A sales render and a "
            "decision render are not the same picture."),
           ("Drawings &amp; references","Plans, elevations or a model, plus reference images for "
@@ -109,12 +143,12 @@ ARCH = [
            "Revision expectations"]),
    cta=("Get your project visualised","Send the drawings and tell us how many views you need.")),
 
- dict(slug="architectural-design", num="05", ad="Architectural Design",
+ dict(slug="architectural-design", num="06", ad="Architectural Design",
    gorsel="/img/cons-drawing.jpg",
-   kart="Full architectural service for buildings beyond a single home — from concept to drawing set.",
-   basli="Buildings that have to work before they can look good.",
+   kart="Full architectural service for buildings beyond a single home, concept to drawing set.",
+   basli="Apartment buildings, hostels, academies and commercial premises.",
    giris="Apartment buildings, hostels, academies, commercial premises. Projects where the plan has "
-         "to satisfy regulations, budgets and dozens of people at once — and where the drawing set "
+         "to satisfy regulations, budgets and dozens of people at once, and where the drawing set "
          "is the thing that gets built from.",
    surec=[("Discovery","Purpose of the building, who uses it, and the commercial or institutional "
            "constraints behind it."),
@@ -135,18 +169,24 @@ ARCH = [
 CONS = [
  dict(slug="residential-construction", num="01", ad="Residential Construction",
    gorsel="/img/panel-construction-v2.jpg",
-   kart="Houses and apartments built to the drawings — costed, scheduled and delivered.",
-   basli="Houses built the way they were drawn.",
+   kart="Houses and apartments built to the drawings, costed and scheduled.",
+   basli="Houses and apartments, built to the drawings.",
    giris="Building a home is where most budgets slip and most timelines break. We take the "
          "drawings — ours or someone else&rsquo;s — and turn them into a costed programme, then "
          "run the work against it.",
    surec=[("Consultation","What is being built, where, and to whose drawings."),
-          ("Site assessment","Access, ground conditions, services, and what the site will allow."),
-          ("Planning","Sequence, trades, and a realistic programme rather than an optimistic one."),
-          ("Cost estimate","A priced breakdown by stage, so you can see where the money goes."),
-          ("Execution","The build itself, run against the programme."),
-          ("Quality control","Checks at each stage, before the next one covers up the last."),
-          ("Handover","Snagging, completion and the documents you will need later.")],
+          ("Site assessment","Access for machinery and deliveries, ground conditions, water and "
+           "power. These decide the sequence more than the design does."),
+          ("Programme","Trades booked in order, with the weather-dependent work placed where the "
+           "season allows it."),
+          ("Cost plan","Priced by stage: substructure, frame, envelope, services, finishes. "
+           "So you can see what each part costs before it starts."),
+          ("Structure &amp; envelope","Foundations, frame, roof and openings. The stage where "
+           "corrections are still cheap."),
+          ("Services &amp; finishes","Plumbing and electrical first fix, then plaster, joinery "
+           "and final fittings."),
+          ("Handover","Snagging list worked through, completion certificate, and the warranties "
+           "and drawings you will need when something needs fixing in five years.")],
    hazir=("What helps us quote","",
           ["Plot location","Drawings, if you have them","Built-up area","Number of floors",
            "Level of finish expected","Target start date","Budget range"]),
@@ -155,17 +195,23 @@ CONS = [
  dict(slug="commercial-construction", num="02", ad="Commercial Construction",
    gorsel="/img/photo-08.jpg",
    kart="Offices, retail and institutional buildings, delivered against a programme.",
-   basli="Commercial work runs on dates.",
+   basli="Offices, retail and institutional premises, delivered on a date.",
    giris="A shop that opens late loses a season. An office handed over late costs rent on two "
          "buildings. Commercial construction is less about craft and more about sequence, and "
          "that is how we plan it.",
-   surec=[("Consultation","Use, area, and the date it has to be operational."),
-          ("Site assessment","Existing structure or bare plot, services, access and working hours."),
-          ("Planning","Trade sequence and the critical path, agreed before work starts."),
-          ("Cost estimate","Priced by package, with provisional sums clearly marked as such."),
-          ("Execution","Build, with progress reported against the programme."),
-          ("Quality control","Stage inspections and sign-off."),
-          ("Handover","Completion, documentation and defect period.")],
+   surec=[("Consultation","Use, floor area, and the date the premises has to be trading."),
+          ("Constraints survey","Existing structure or bare plot, incoming services, delivery "
+           "access and permitted working hours. In an occupied building the last one governs "
+           "everything."),
+          ("Critical path","The sequence agreed before work starts, with the items that cannot "
+           "slip identified and dated."),
+          ("Package pricing","Priced by trade package, with provisional sums marked as provisional "
+           "rather than buried in a total."),
+          ("Fit-out","Built in the agreed sequence, with progress measured against the programme "
+           "each week."),
+          ("Compliance &amp; testing","Fire, electrical and access requirements tested and "
+           "certified. This is the paperwork that decides whether you can legally open."),
+          ("Handover","Completion, operation and maintenance documents, and a defect period.")],
    hazir=("What helps us quote","",
           ["Type of premises","Floor area","Location","Drawings or a fit-out brief",
            "Required completion date","Operating constraints","Budget range"]),
@@ -177,15 +223,21 @@ CONS = [
    basli="Renovation is design before it is demolition.",
    giris="Old buildings hide things. The drawings are wrong, walls are not where they should be, "
          "and something structural is always where you wanted an opening. We design the change "
-         "first, then carry it out — so surprises are answered on paper, not by three people "
+         "first, then carry it out, so surprises are answered on paper, not by three people "
          "standing in the dust.",
-   surec=[("Consultation","What you want the building to do that it currently does not."),
-          ("Survey","Measured survey of what is actually there, not what the old plans claim."),
-          ("Planning","What can move, what cannot, and in which order the work has to happen."),
-          ("Cost estimate","Priced by stage, with a clear allowance for what old buildings hide."),
-          ("Execution","Demolition, structure, services and finishes."),
-          ("Quality control","Checks before each stage is covered over."),
-          ("Handover","Completion and the record of what was actually done.")],
+   surec=[("Consultation","What the building does now, and what you need it to do instead."),
+          ("Measured survey","We measure what is there today rather than trusting the old plans. "
+           "In an old building the two rarely match."),
+          ("Opening up","Where the drawings are uncertain we open a small area first: a ceiling "
+           "void, a wall base. Nothing is priced on a guess."),
+          ("Structural check","Which walls carry load, where beams are needed, and what that does "
+           "to the layout you wanted."),
+          ("Costing","Priced by stage, with a stated contingency for what old buildings hide. "
+           "A renovation quoted without one is a quote that will change."),
+          ("Sequencing","Demolition, structure, services, then finishes. Getting this order wrong "
+           "is what makes renovations run long."),
+          ("Execution &amp; handover","The work itself, with checks before each stage is covered over, "
+           "and a record of what was built.")],
    hazir=("What helps us quote","",
           ["Property type and age","Photographs of every room","Existing plans, if any",
            "What you want changed","Whether you will live there during the work",
@@ -195,18 +247,23 @@ CONS = [
  dict(slug="project-management", num="04", ad="Project Management",
    gorsel="/img/cons-drawing.jpg",
    kart="You hold the contracts; we run the programme, the trades and the quality on your behalf.",
-   basli="Someone whose job is to notice.",
+   basli="We run the programme; you keep the contracts.",
    giris="Some clients want to keep their own contractors and their own contracts, but need "
          "someone whose full-time job is the programme, the sequence and the standard of work. "
          "That is this service. You stay in control of the money; we make sure the work matches "
          "the drawings.",
-   surec=[("Consultation","Scope, who is already appointed, and where the risks sit."),
-          ("Assessment","Review of drawings, contracts and the programme as it stands."),
-          ("Planning","A realistic schedule, with the critical path identified."),
-          ("Cost control","Budget tracking against stages, and early warning when something moves."),
-          ("Execution oversight","Site visits, trade coordination and instructions in writing."),
-          ("Quality control","Inspection at each stage, against the drawings and the specification."),
-          ("Handover","Snagging list, completion and closing documents.")],
+   surec=[("Review","We read the drawings, the contracts and the programme you already have, "
+           "and tell you where the exposure sits."),
+          ("Baseline programme","A schedule with the critical path marked, so it is visible which "
+           "delays matter and which do not."),
+          ("Cost plan","Budget mapped to stages. You see a variance the week it appears, not at "
+           "the end of the quarter."),
+          ("Site oversight","Regular visits, trade coordination, and every instruction issued in "
+           "writing so nobody can claim they were told otherwise."),
+          ("Stage inspection","Work checked against drawings and specification before it is "
+           "covered, signed off stage by stage."),
+          ("Reporting","A short written report on progress, cost and risk, at an interval you set."),
+          ("Closing out","Snagging list tracked to completion, warranties and documents collected.")],
    hazir=("What helps us start","",
           ["Project type and location","Current stage","Drawings and specifications",
            "Contractors already appointed","Budget and programme","Where you feel the risk is"]),
@@ -214,18 +271,23 @@ CONS = [
 
  dict(slug="turnkey-projects", num="05", ad="Turnkey Projects",
    gorsel="/img/cons-bedroom.jpg",
-   kart="Design, build and finish under one contract — you hand over a plot and receive a building.",
+   kart="Design, build and finish under one contract. You hand over a plot and receive a building.",
    basli="One contract, one point of responsibility.",
    giris="Turnkey means you deal with us and we deal with everyone else. Design, approvals, "
-         "construction, finishes and handover under a single agreement — priced up front, with "
+         "construction, finishes and handover under a single agreement, priced up front, with "
          "one party accountable when something goes wrong.",
-   surec=[("Consultation","What you want built, where, and to what standard."),
-          ("Site &amp; requirement assessment","Plot, regulations, services and constraints."),
-          ("Design","Full design developed and agreed before pricing is fixed."),
-          ("Cost estimate","A single fixed proposal covering design through handover."),
-          ("Execution","Construction and finishes, managed by us end to end."),
-          ("Quality control","Stage-by-stage inspection against the agreed specification."),
-          ("Handover","A finished building, with documentation and a defect period.")],
+   surec=[("Brief","What you want built, where, to what standard, and by when."),
+          ("Feasibility","Plot, regulations, services and budget checked together. If the three "
+           "do not meet, we say so before you spend on design."),
+          ("Design","Full design developed and signed off. Under a turnkey contract the price "
+           "follows the design, so the design is fixed first."),
+          ("Fixed proposal","One price covering design, approvals, construction and finishes, "
+           "with the specification attached to it."),
+          ("Single contract","One agreement, one party accountable. You will not be arbitrating "
+           "between an architect and a contractor when something goes wrong."),
+          ("Construction","Built and managed by us, reported against the programme."),
+          ("Handover","A finished building, documentation, and a defect period during which we "
+           "come back.")],
    hazir=("What helps us quote","",
           ["Plot location and size","Building type and use","Required area","Level of finish",
            "Target completion date","Budget range","Whether design already exists"]),
@@ -262,7 +324,7 @@ TRADE = [
  dict(slug="marble", num="01", ad="Marble",
    gorsel="/img/products/statuario-india.jpg",
    kart="Ten Indian marbles, quarried in Rajasthan, Madhya Pradesh, Gujarat and Uttar Pradesh.",
-   basli="Indian marble, block to slab.",
+   basli="Ten Indian marbles, block to slab.",
    giris="India is one of the largest producers of natural stone on earth. We supply marble by the "
          "container — selected at the block, cut to your specification, crated and shipped.",
    urunler=("Available marbles", MERMER),
@@ -278,8 +340,8 @@ TRADE = [
 
  dict(slug="granite-natural-stone", num="02", ad="Granite &amp; Natural Stone",
    gorsel="/img/trade-quarry.jpg",
-   kart="Granite, sandstone and quartzite — for surfaces that take heavy wear.",
-   basli="Where marble is too soft for the job.",
+   kart="Granite, sandstone and quartzite for surfaces that take heavy wear.",
+   basli="Granite, sandstone and quartzite for heavy-wear surfaces.",
    giris="Granite and the harder Indian stones go where marble should not: kitchen worktops in "
          "commercial use, external paving, stair treads in public buildings, and cladding that "
          "has to survive weather without sealing every year.",
@@ -295,8 +357,8 @@ TRADE = [
 
  dict(slug="ceramic-porcelain", num="03", ad="Ceramic &amp; Porcelain",
    gorsel="/img/products/large-format-tiles.jpg",
-   kart="Ten tile ranges made in India — floor, wall and large-format porcelain.",
-   basli="Indian ceramic, made for volume.",
+   kart="Ten tile ranges made in India: floor, wall and large-format porcelain.",
+   basli="Ten Indian tile ranges, supplied by the container.",
    giris="India&rsquo;s ceramic industry ships to every continent, and the price-to-quality ratio "
          "at volume is difficult to match. We supply full containers across the finishes that "
          "actually move.",
@@ -313,14 +375,14 @@ TRADE = [
  dict(slug="sanitary-building-materials", num="04", ad="Sanitary &amp; Building Materials",
    gorsel="/img/photo-07.jpg",
    kart="Sanitaryware, fittings and finishing materials, consolidated into the same shipment.",
-   basli="The rest of the container.",
+   basli="Sanitaryware and finishing materials, in the same shipment.",
    giris="A project that needs marble usually needs the rest of the bathroom too. Rather than "
          "running three suppliers and three shipments, we consolidate sanitaryware and finishing "
          "materials into the same container.",
    bilgi=[("Sanitaryware","Basins, water closets, pedestals and counter tops."),
           ("Fittings","Taps, showers, and bathroom accessories."),
           ("Finishing materials","Adhesives, grouts and installation consumables."),
-          ("Why consolidate","One shipment, one set of documents, one freight cost — instead of "
+          ("Why consolidate","One shipment, one set of documents, one freight cost, instead of "
            "three of each."),
           ("Sourcing","Specified against the project, not picked from whatever is in stock."),
           ("Export","Combined loading with stone or tile in the same container.")],
@@ -330,7 +392,7 @@ TRADE = [
  dict(slug="sourcing-from-india", num="05", ad="Sourcing from India",
    gorsel="/img/trade-interior.jpg",
    kart="You know what you want; we find it, check it and get it priced properly.",
-   basli="Sourcing, by people who specify the material themselves.",
+   basli="You send a reference; we find it, check it and price it.",
    giris="We design interiors as well as supply them. That means when you send a reference image, "
          "we are reading it the way a designer does — not matching a colour swatch and hoping the "
          "material behaves the same way in the room.",
@@ -348,7 +410,7 @@ TRADE = [
  dict(slug="global-export", num="06", ad="Global Export",
    gorsel="/img/panel-trade-v2.jpg",
    kart="Crating, documentation and freight from an Indian port to your project.",
-   basli="India to the world.",
+   basli="Crating, documentation and freight from an Indian port.",
    giris="Getting stone out of India is a paperwork exercise as much as a logistics one. We handle "
          "the part between the factory gate and your site, so what arrives matches what you ordered "
          "and clears customs without a phone call at midnight.",
@@ -358,7 +420,7 @@ TRADE = [
           ("Documentation","Commercial invoice, packing list, bill of lading, certificate of "
            "origin and any inspection certificates required."),
           ("Ports","Shipped from Indian ports including Mundra, Nhava Sheva and Kandla."),
-          ("Company","ARCOTRA PRIVATE LIMITED &mdash; GST-registered, exporting under LUT.")],
+          ("Company","ARCOTRA PRIVATE LIMITED. GST-registered, exporting under LUT.")],
    cta=("Ask about shipping","Tell us the destination port and the volume for a freight estimate.")),
 ]
 
@@ -381,9 +443,9 @@ BOLUMLER = [
  dict(slug="trade", num="03", ad="Trade",
    gorsel="/img/panel-trade-v2.jpg",
    kart="Marble, natural stone, ceramic and building materials, shipped from India by the container.",
-   basli="Material, specified by people who design with it.",
+   basli="Marble, stone, ceramic and building materials from India.",
    giris="We supply the stone and tile that finishes buildings &mdash; and because we draw those "
-         "buildings too, what we recommend comes from having designed the room rather than from "
+         "buildings too, what we recommend comes from having designed the room, not from "
          "what is sitting in a warehouse.",
    hizmetler=TRADE),
 ]
