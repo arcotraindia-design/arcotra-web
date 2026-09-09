@@ -452,7 +452,7 @@ BOLUMLER = [
          "dimensions &mdash; because every decision made before construction starts is a decision "
          "that costs nothing to change.",
    hizmetler=ARCH,
-   galeri=("Selected work", "Delivered projects, as the client saw them.", ISLER)),
+   galeri=("Project gallery", "Our projects.", ISLER)),
  dict(slug="construction", num="02", ad="Construction",
    gorsel="/img/panel-construction-v2.jpg",
    kart="Residential, commercial and renovation work &mdash; costed, scheduled and delivered.",
