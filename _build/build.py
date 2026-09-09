@@ -114,6 +114,30 @@ def cta_blok(baslik, metin, c="", s=""):
   </div>
 </section>'''
 
+# ─────────── proje galerisi (isteğe bağlı: dict'te galeri= varsa basılır) ───────────
+def galeri(g):
+    if not g:
+        return ""
+    ust, baslik, isler = g
+    bloklar = ""
+    for i in isler:
+        kareler = "".join(
+            f'''<figure class="gcard">
+          <img src="/img/{d}.jpg" alt="{duz(alt)}" width="1200" height="844" loading="lazy">
+        </figure>''' for d, alt in i["fotograflar"])
+        etiket = " &middot; ".join(x for x in (i.get("kapsam"), i.get("yer"), i.get("yil")) if x)
+        bloklar += f'''
+    <div class="proje rv">
+      <div class="ptag"><h3>{i["ad"]}</h3><p>{etiket}</p></div>
+      <div class="gal">{kareler}</div>
+    </div>'''
+    return f'''
+<section class="alt">
+  <div class="wrap">
+    <div class="sechead rv"><p class="eyebrow">{ust}</p><h2>{baslik}</h2></div>{bloklar}
+  </div>
+</section>'''
+
 def yaz(yol, icerik):
     tam = os.path.join(KOK, yol.strip("/"), "index.html") if yol != "/" else os.path.join(KOK, "index.html")
     os.makedirs(os.path.dirname(tam), exist_ok=True)
@@ -165,6 +189,7 @@ def bolum(b):
 <main class="panels of5">{kartlar}
 </main>
 '''
+      + galeri(b.get("galeri"))
       + cta_blok("Not sure which one you need?",
                  "Describe the project in a sentence or two and we will tell you where it fits.",
                  b["slug"])
@@ -247,7 +272,7 @@ def detay(b, h):
   </div>
 </header>
 '''
-      + yol + urun + bilgi + hazir
+      + yol + urun + bilgi + hazir + galeri(h.get("galeri"))
       + cta_blok(cta_b, cta_m, b["slug"], h["slug"])
       + footer())
 

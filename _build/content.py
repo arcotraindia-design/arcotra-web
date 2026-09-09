@@ -424,6 +424,25 @@ TRADE = [
    cta=("Ask about shipping","Tell us the destination port and the volume for a freight estimate.")),
 ]
 
+# ─────────────────────── İŞLER (proje galerisi) ───────────────────────
+# Her proje bir kayıt. Yeni render geldiğinde buraya yeni bir dict eklemek yeter.
+# İleride ayrı bir /our-works/ sayfası açılırsa aynı kayıtlar ikinci bir şablona
+# verilir; içeriğin yeniden girilmesi gerekmez.
+ISLER = [
+ dict(slug="tuna-residence", ad="Tuna Residence",
+   kapsam="Interior design and visualisation", yil="2026",
+   fotograflar=[
+     ("work/tuna-residence-01", "Double-height living room with a full-height timber "
+      "slat screen separating the stair"),
+     ("work/tuna-residence-02", "Staircase with a glass balustrade and a planted rock "
+      "garden beneath the flight"),
+     ("work/tuna-residence-03", "Dining table set below the stair, open to the kitchen"),
+     ("work/tuna-residence-04", "Living room media wall in grey joinery with open shelving"),
+     ("work/tuna-residence-05", "Kitchen and dining axis with marble splashback and "
+      "full-height timber joinery"),
+   ]),
+]
+
 BOLUMLER = [
  dict(slug="architecture", num="01", ad="Architecture",
    gorsel="/img/panel-architecture-v2.jpg",
@@ -432,7 +451,8 @@ BOLUMLER = [
    giris="From a single room to a whole building. We plan it, draw it and show it to you in three "
          "dimensions &mdash; because every decision made before construction starts is a decision "
          "that costs nothing to change.",
-   hizmetler=ARCH),
+   hizmetler=ARCH,
+   galeri=("Selected work", "Delivered projects, as the client saw them.", ISLER)),
  dict(slug="construction", num="02", ad="Construction",
    gorsel="/img/panel-construction-v2.jpg",
    kart="Residential, commercial and renovation work &mdash; costed, scheduled and delivered.",

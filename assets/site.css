@@ -135,6 +135,21 @@ a.card:hover .pic img{transform:scale(1.04)}
   color:var(--accent);font-weight:600}
 .pcard p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.55}
 
+/* proje galerisi */
+.proje+.proje{margin-top:clamp(44px,6vw,76px)}
+.ptag{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+  margin:0 0 clamp(18px,2.4vw,28px);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.ptag h3{font-size:clamp(19px,2.2vw,24px);margin:0}
+.ptag p{margin:0;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:clamp(14px,1.8vw,22px)}
+.gcard{margin:0;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
+.gcard img{display:block;width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;
+  transition:transform .6s ease}
+.gcard:hover img{transform:scale(1.04)}
+@media (prefers-reduced-motion:reduce){.gcard img{transition:none}
+  .gcard:hover img{transform:none}}
+
 /* ── iki sütun ── */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);align-items:center}
 .duo img{width:100%;height:auto}
