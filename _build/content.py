@@ -430,15 +430,23 @@ TRADE = [
 # verilir; içeriğin yeniden girilmesi gerekmez.
 ISLER = [
  dict(slug="tuna-residence", ad="Tuna Residence",
-   kapsam="Interior design and visualisation", yil="2026",
+   kapsam="House design and visualisation", yil="2026",
    fotograflar=[
-     ("work/tuna-residence-01", "Double-height living room with a full-height timber "
+     ("work/tuna-residence-ext-01", "Front elevation of a two-storey house, with a "
+      "lit double-height entrance bay and dark timber screening"),
+     ("work/tuna-residence-ext-02", "Garden elevation with the pool and terrace, seen "
+      "from the lawn"),
+     ("work/tuna-residence-ext-03", "Poolside terrace with sun loungers against the "
+      "timber-clad wall"),
+     ("work/tuna-residence-ext-04", "Side approach at dusk: stone paving, planted "
+      "borders and facade lighting"),
+     ("work/tuna-residence-int-01", "Double-height living room with a full-height timber "
       "slat screen separating the stair"),
-     ("work/tuna-residence-02", "Staircase with a glass balustrade and a planted rock "
+     ("work/tuna-residence-int-02", "Staircase with a glass balustrade and a planted rock "
       "garden beneath the flight"),
-     ("work/tuna-residence-03", "Dining table set below the stair, open to the kitchen"),
-     ("work/tuna-residence-04", "Living room media wall in grey joinery with open shelving"),
-     ("work/tuna-residence-05", "Kitchen and dining axis with marble splashback and "
+     ("work/tuna-residence-int-03", "Dining table set below the stair, open to the kitchen"),
+     ("work/tuna-residence-int-04", "Living room media wall in grey joinery with open shelving"),
+     ("work/tuna-residence-int-05", "Kitchen and dining axis with marble splashback and "
       "full-height timber joinery"),
    ]),
 ]
