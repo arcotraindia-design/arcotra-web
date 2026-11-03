@@ -449,6 +449,36 @@ ISLER = [
      ("work/tuna-residence-int-05", "Kitchen and dining axis with marble splashback and "
       "full-height timber joinery"),
    ]),
+ dict(slug="bathroom-options", ad="Bathroom Options",
+   kapsam="Bathroom design alternatives",
+   fotograflar=[
+     ("work/bathroom-options-plan-01", "Top-down plan of the bathroom: shower tray in one "
+      "corner, wall-hung WC and basin along the opposite walls"),
+     ("work/bathroom-options-plan-02", "Alternative plan: walk-in shower across one side, "
+      "basin and WC on the opposite wall"),
+     ("work/bathroom-options-01", "Corner glass shower with blue herringbone tiles, "
+      "wall-hung WC and white cabinets above"),
+     ("work/bathroom-options-02", "Grey stone walls with a timber feature wall behind the "
+      "WC and a sliding glass shower screen"),
+     ("work/bathroom-options-03", "Same layout with a blue marble feature wall on white "
+      "marble walls"),
+     ("work/bathroom-options-04", "Same layout with a green-grey stone feature wall"),
+     ("work/bathroom-options-05", "Same layout with a dark walnut feature wall on warm "
+      "beige tiles"),
+     ("work/bathroom-options-06", "Same layout with a light oak feature wall on beige tiles"),
+     ("work/bathroom-options-07", "Same layout with a stone feature wall, a lit niche and "
+      "cabinets above the WC"),
+     ("work/bathroom-options-08", "Walk-in shower with black fittings, brown marble walls, "
+      "a round backlit mirror and a timber vanity"),
+     ("work/bathroom-options-09", "Same bathroom with a recessed timber cabinet and towel "
+      "niche above the WC"),
+     ("work/bathroom-options-10", "Same layout in green-gold patterned tiles with a "
+      "wall-hung basin"),
+     ("work/bathroom-options-11", "Same layout in grey-green stone tiles"),
+     ("work/bathroom-options-12", "Same layout with an oak-effect wall and chrome fittings"),
+     ("work/bathroom-options-13", "Same layout in brown marble with a wall-hung basin"),
+     ("work/bathroom-options-14", "Same layout with a floor-standing pedestal basin"),
+   ]),
 ]
 
 BOLUMLER = [
